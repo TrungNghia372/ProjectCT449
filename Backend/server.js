@@ -15,6 +15,7 @@ const fishPedestalRoute = require('./routes/FishPedestal');
 const authRoute = require('./routes/Auth');
 const userRoute = require('./routes/user');
 const newsRoute = require('./routes/News');
+const cartsRoute = require('./routes/Carts');
 //------------------------------------------
 
 dotenv.config();
@@ -25,9 +26,9 @@ mongoose.connect((process.env.MONGODB_URL),() => {
 //-------------------------------------------
 const createMongoose = require('./data/dataFish');
 // lay data cho home
-createMongoose.createDataFishPedestal();
-createMongoose.createDataFish();
-createMongoose.createDataAquaticPlant();
+// createMongoose.createDataFishPedestal();
+// createMongoose.createDataFish();
+// createMongoose.createDataAquaticPlant();
 // createMongoose.createDataNews(); 
 //-------------------------------------------
 
@@ -42,6 +43,7 @@ app.use("/api/fishPedestal",fishPedestalRoute);
 app.use("/api/auth",authRoute);
 app.use("/api/user",userRoute);
 app.use("/api/news",newsRoute);
+app.use("/api/cart",cartsRoute);
 //
 app.listen(4000, () => {
     console.log('Server is running...');

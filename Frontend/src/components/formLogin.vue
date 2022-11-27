@@ -10,7 +10,7 @@
                 </div>
                 <div class="home">
                      <p
-                     @click="gotoHome">Home</p>
+                     @click="gotoHome"><i class="fa-solid fa-house"></i></p>
                 </div>
             </div>
 
@@ -27,15 +27,17 @@
                 </div>
 
                 <div class="contentForm">
-                    <form class="formContentLogin">
+                    <form class="formContentLogin"
+                          @submit.prevent="login"
+                          >
                         <div class="form__field">
                             <label for="username">Tài khoản</label>
-                            <input type="text" name="username" placeholder="Nhập tài khoản mới">
+                            <input type="text" name="username" placeholder="Nhập tài khoản mới" v-model="username">
                         </div>
 
                         <div class="form__field">
                             <label for="psw">Mật khẩu</label>
-                            <input type="password" name="psw" placeholder="Nhập mật khẩu mới vào">
+                            <input type="password" name="psw" placeholder="Nhập mật khẩu mới vào" v-model="psw">
                         </div>
 
                         <div class="form__field ">
@@ -74,7 +76,19 @@
     </div>
 </template>
 <script>
+   import axios from 'axios';
+
    export default {
+    // props:[
+    //     "getInfoUsername"
+    // ],
+    data() {
+        return {
+            username: "",
+            psw: "",
+        }
+    },
+    
     methods: {
         onCloseFormLogin(){
             this.$emit("cancelFormLogin");
@@ -84,7 +98,30 @@
         },
         gotoRegister(){
              this.$emit("gotoRegister");
-        },  
+        }, 
+        
+        
+        async login(){
+            // console.log(this.username + this.psw);
+
+            // this.getInfoUsername(this.username);
+
+            var result = await axios.post('http://localhost:4000/api/auth/login',{
+                username: this.username,
+                psw: this.psw,
+            });  
+            
+            if (result.data != false) {
+                localStorage.setItem("token",result.data);
+                this.onCloseFormLogin();
+                // this.$emit("showLogout");
+                location.reload();
+            }
+            else {
+                alert("Nhập sai tài khoản hoặc mật khẩu");
+            }
+        },
+
     },
    }
 </script>

@@ -27,9 +27,25 @@
                         </div>
                     </div>
                     <div class="buytoCart">
-                        <input type="text" value="1" style="border: 1px solid rgb(189, 194, 201)">
-                        <button class="btn-Cart">
-                            Thêm Vào Vỏ Hàng
+
+
+                        <div class="quantityBuyCard">
+                            <a  class="btn-subtract" 
+                                @click="changeCounter('-1')">
+                                <i class="fa-solid fa-minus"></i>
+                            </a>
+                            <input type="text" class="quantity" id="" :value="count" minvalue="1" maxvalue="999">
+                            <a  class="btn-add"
+                                @click="changeCounter('1')">
+                                <i class="fa-solid fa-plus"></i>
+                            </a>
+                        </div>
+
+
+                        <button class="btn-Cart"
+                                @click="addToCart"
+                                >
+                                Thêm Vào Giỏ Hàng
                         </button>
                     </div>
                 </div>
@@ -103,6 +119,7 @@
         data() {
             return {
                 fishpedestal: {},
+                count: 1,
             }
         },
         created(){
@@ -120,6 +137,39 @@
                 );
                     this.fishpedestal = result.data
             },
+
+            changeCounter(num){
+                this.count+=+num;
+                !isNaN(this.count) && this.count > 0 ? this.count : this.count = 1;
+            },
+
+            // Cart
+            async addToCart(){
+                if (this.$store.state.user==null) {
+                    // alert("Bạn phải đăng nhập để mua hàng");
+                   this.isshowLogin=true;
+                } 
+                else {
+                    try {
+                        const result = await axios.post('http://localhost:4000/api/cart/add/product',{
+                        idProduct: this.fishpedestal._id,
+                        quantity:  this.count,
+                        idCart:    this.$store.state.idCart,
+                        });
+
+                        if (result.data == true) {
+                            alert('San pham da duoc them');
+                            location.reload();
+
+                        }
+                        
+                    } catch (error) {
+                        console.log(error);
+                    }
+                }
+                
+            
+            }
         } ,
     }
     
@@ -196,5 +246,42 @@
         text-align: start;
         border-bottom: 1px solid #fff;
         padding: 0px 0px 10px 0px;
+    }
+
+
+    .quantityBuyCard{
+        width:70px;
+        border:1px solid #fff;
+        border-radius: 6px;
+        background-color: #ffffff;
+        display:flex;
+        justify-content: space-evenly;
+        
+    }
+    .quantityBuyCard>a{
+        color:black;
+        
+    }
+    .quantity{
+        width:20px;
+        border:none;
+        background-color: transparent;
+        text-align: center;
+        color:#C92127;
+
+    }
+    .btn-Cart{
+        width:60%;
+        /* margin:auto; */
+        padding: 10px 0px;
+        margin-top: 20px;
+        border-radius: 10px;
+        border:2px solid #0095a8;
+    }
+    .btn-Cart:hover{
+        box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.582);
+        background-color: #0095a8;
+        color:#fff;
+        font-weight: bold;
     }
 </style>

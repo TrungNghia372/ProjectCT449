@@ -20,7 +20,10 @@
                         </p>
                         <p class="card-quantity">Còn lại :{{item.quantity}}</p>
                     </div>
-                    <button class="card-btn-order">Thêm vào giỏ hàng</button>
+                    <button class="card-btn-order"
+                            >
+                            Xem chi tiết
+                    </button>
 
                 </div>
 
@@ -60,6 +63,8 @@ import axios from 'axios';
         showFish(id){
             this.$router.push({name : 'detailFish', params:{id} });
         },  
+        
+       
     },
     watch: {
         '$route': function(){

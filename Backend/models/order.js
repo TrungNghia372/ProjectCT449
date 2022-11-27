@@ -2,14 +2,11 @@ const mongoose = require('mongoose');
 
 const orderSchema = new mongoose.Schema({
     idCart : {
-        type : {mongoose.Schema.Types.ObjectId, ref="Cart"},
+        type : mongoose.Schema.Types.ObjectId,
         require: true,
     },
     idProduct : {
-        type : mongoose.Types.ObjectId,
-    },
-    dateOrder : {
-        type : Object,
+        type : mongoose.Schema.Types.ObjectId,
     },
     quantity : {
         type : Number,

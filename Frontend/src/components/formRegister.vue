@@ -10,7 +10,7 @@
                     <img src="../assets/logo2.png" alt="">
                 </div>
                 <div class="home">
-                    <p @click="gotoHome">Home</p>
+                    <p @click="gotoHome"><i class="fa-solid fa-house"></i></p>
                 </div>
             </div>
 
@@ -26,24 +26,26 @@
                 </div>
 
                 <div class="contentForm">
-                    <form class="formContentLogin">
+                    <form class="formContentLogin"
+                          @submit.prevent="register"
+                        >
                         <div class="form__field">
                             <label for="username">Tài khoản mới</label>
-                            <input type="text" name="username" placeholder="Nhập tài khoản mới">
+                            <input type="text" name="username" placeholder="Nhập tài khoản mới" v-model="username">
                         </div>
 
                         <div class="form__field">
                             <label for="psw">Mật khẩu mới</label>
-                            <input type="password" name="psw" placeholder="Nhập mật khẩu mới vào">
+                            <input type="password" name="psw" placeholder="Nhập mật khẩu mới vào" v-model="psw">
                         </div>
 
                         <div class="form__field">
                             <label for="email">Email</label>
-                            <input type="email" name="email" placeholder="nhập email vào">
+                            <input type="email" name="email" placeholder="nhập email vào" v-model="email">
                         </div>
 
                         <div class="form__field ">
-                            <button class="submit_btn" type="submit">Login</button>
+                            <button class="submit_btn" type="submit">Register</button>
                         </div>
                     </form>
                     
@@ -79,6 +81,16 @@
 </template>
 <script>
    export default {
+    props: [
+        "handleRegister"
+    ],
+    data() {
+        return {
+            username: "",
+            psw: "",
+            email: "",
+        }
+    },
     methods: {
         onCloseFormRegister(){
             this.$emit("cancelFormRegister");
@@ -88,6 +100,10 @@
         },
         gotoLogin(){
             this.$emit("gotoLogin");
+        },
+
+        register(){
+            this.handleRegister(this.username,this.psw,this.email);
         }
     },
    }
@@ -137,7 +153,9 @@
     .home{
         margin-right:20px;
         cursor:pointer;
+        height:30px;
     }
+
     .formMain{
         padding: 30px;
     }

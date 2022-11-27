@@ -8,7 +8,7 @@
                 <div class="card h-100"
                      @click="showDetailFish(item._id)"
                      >
-                    <img :src="item.imgFish" class="card-img-top" alt="...">
+                    <img :src="item.img" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{item.name}}</h5>
                         <p class="card-text">{{item.description}}</p>
@@ -21,7 +21,7 @@
                         </p>
                         <p class="card-quantity">Còn lại :{{item.quantity}}</p>
                     </div>
-                    <button class="card-btn-order">Thêm vào giỏ hàng</button>
+                    <button class="card-btn-order">Xem chi tiết</button>
 
                 </div>
 

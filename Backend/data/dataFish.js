@@ -147,7 +147,7 @@ var arrFish = [
         name:'CÁ BÌNH TÍCH',
         price: 8000,
         description:'Cá khỏe, dễ nuôi, thích ứng nước từ ngọt đến lợ, ưa độ mặn 5 – 10‰. Tránh môi trường nước mềm và axít vì cá dễ bị bệnh rung thân.',
-        popularType: false,
+        popularType: true,
         habitat:'nuoc ngot',
         quantity:659,
         img: 'http://cacanhsonyen.com/image/cache/data/Ca/Ca_Co/BinhTich_1-250x250.jpg'
@@ -156,7 +156,7 @@ var arrFish = [
         name:'CÁ CẦU VỒNG XANH',
         price: 18000,
         description:'vây lưng đỏ, thân cá có màu xanh óng ánh. Con đực có màu tươi sáng hơn',
-        popularType: false,
+        popularType: true,
         habitat:'nuoc ngot',
         quantity:123,
         img: 'http://cacanhsonyen.com/image/cache/data/Ca/Ca_Co/CauVongXanh1-250x250.jpg'
@@ -174,7 +174,7 @@ var arrFish = [
         name:'CÁ TRÂN CHÂU CÁC MÀU',
         price: 8000,
         description:'Cá ưa môi trường nước giàu ôxy và khá nhạy cảm với nồng độ nitrít cao, cần bố trí đủ máy sục khí và máy lọc, thay nước định kỳ.',
-        popularType: false,
+        popularType: true,
         habitat:'nuoc ngot',
         quantity:33,
         img: 'http://cacanhsonyen.com/image/cache/data/Ca/Ca_Co/TranChau_4-250x250.jpg'
