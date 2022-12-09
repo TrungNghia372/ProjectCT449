@@ -111,7 +111,7 @@ var arrFish = [
         name:'CÁ CHUỘT MỸ',
         price: 90000,
         description:'Cá ăn tạp, ăn bẩn ở đáy bể, trùng chỉ, bo bo, thức ăn viên cỡ nhỏ, ăn ốc, giáp xác...',
-        popularType: false,
+        popularType: true,
         habitat:'nuoc ngot',
         quantity:21,
         img: 'http://cacanhsonyen.com/image/cache/data/Ca/Ca_Co/ChuotMy-250x250.jpg'
@@ -138,7 +138,7 @@ var arrFish = [
         name:'CÁ MẶT TRĂNG',
         price: 8000,
         description:'Cá khỏe, dễ nuôi, thích ứng nước từ ngọt đến lợ, ưa độ mặn 5 – 10‰. Tránh môi trường nước mềm và axít vì cá dễ bị bệnh rung thân.',
-        popularType: false,
+        popularType: true,
         habitat:'nuoc ngot',
         quantity:293,
         img: 'http://cacanhsonyen.com/image/cache/data/Ca/Ca_Co/MatTrang_4-250x250.jpg'
@@ -192,7 +192,7 @@ var arrFish = [
         name:'CÁ BỐNG DỌN BỂ',
         price: 18000,
         description:'Thường sống tầng giữa và đáy bể, nuôi trong bể thủy sinh có nhiều thực vật. Là loại cá nhút nhát, hòa bình và có thể nuôi trung với nhiều loại cá khác. Không sinh sản trong môi trường nhân tạo.',
-        popularType: false,
+        popularType: true,
         habitat:'nuoc ngot',
         quantity:232,
         img: 'http://cacanhsonyen.com/image/cache/data/Ca/Ca_Co/BongDonBe-250x250.jpg'
@@ -201,7 +201,7 @@ var arrFish = [
         name:'CÁ HỒNG TỬ KỲ',
         price: 8000,
         description:'Cá ăn tạp từ thực vật đến giáp xác, trùng, côn trùng, thức ăn viên',
-        popularType: false,
+        popularType: true,
         habitat:'nuoc ngot',
         quantity:372,
         img: 'http://cacanhsonyen.com/image/cache/data/Ca/Ca_Co/HongTuKy-250x250.jpg'
@@ -219,7 +219,7 @@ var arrFish = [
         name:'CÁ MÃ GIÁP',
         price: 50000,
         description:'Cá ăn tạp từ thực vật đến giáp xác, trùng, côn trùng, thức ăn viên',
-        popularType: false,
+        popularType: true,
         habitat:'nuoc ngot',
         quantity:14,
         img: 'http://cacanhsonyen.com/image/cache/data/Ca/Ca_Co/MaGiap-250x250.jpg'

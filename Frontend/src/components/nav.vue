@@ -4,13 +4,12 @@
         <div class="logo"
             @click="gotoHome"
             >
-            <img src="../assets/logo.png" alt="">
+            <img src="../assets/logo2.png" alt="">
         </div>
         <div class="product">
             Sản phẩm
             <ul class="listProduct">
-                <li class="fish"
-                   
+                <li class="fish"  
                     >
                     <p  @click.self="getFishHabitat('')">
                         <i class="fa-solid fa-fish-fins"></i>
@@ -104,27 +103,34 @@
    
     
     .navbarr{
-        height:55px;
-        background-color:#0b486b ;
+        /* height:55px; */
+        /* background-color:#0b486b ; */
         display: flex;
-        align-items: center;
+        /* align-items: center; */
         list-style: none;
         justify-content: space-evenly;
         text-align: center;
         color:#fff;
-        margin-bottom: 0;
+        /* margin-bottom: 0; */
         /* margin-top:38px; */
         position: fixed;
-        top:38px;
+        top:39px;
+        padding-top:10px;
         right:0;
         left:0;
         z-index:9;
-        font-weight: 200 ;
+        font-size: 20px;
+        font-weight: 200 ;  
         /* widows: 100%; */
+        background-color: #0b1b2354;
+    }
+    .logo{
+        /* flex:1; */
     }
     .logo > img{
         /* height :200px; */
-        height:200px;
+        /* height:200px; */
+        height:60px;
         /* height:50px; */
         width: 100%;
         padding-top: 3px;
@@ -135,16 +141,22 @@
     .news,
     .contact{
         padding:15px 30px;
+        /* box-shadow: ; */
+        width:240px;
+        /* border-right:1px solid darkcyan; */
     }
     .product:hover,
     .productPopular:hover,
     .news:hover,
     .contact:hover{
         border-radius: 15px  ;
-        background-color: #fff;
-        color:darkcyan;
+        /* background-color: #fff; */
+        color:rgb(0, 184, 184);
         font-weight: bold;
+        box-shadow: 4px 4px 4px 0px rgba(255, 255, 255, 0.194);
+        border: 1px solid  darkcyan;
         /* padding-left:10px; */
+        /* font-size: 21px; */
         
     }
     .product{
@@ -155,18 +167,25 @@
         display: block;
     }
     .listProduct{
+        margin-top:10px;
         border-radius: 0 0 10px 10px;
-        background-color:#fff;
-        min-width: 160px;
+        /* background-color:#fff; */
+        min-width: 200px;
         position: absolute;
         z-index: 10;
         text-align: start;
         padding: 2px;
         display: none;
-        color :darkcyan;
+        color :#fff;
         list-style: none;
         top: 54px;
-        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+        background-color: #09161d54;
+
+        /* box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%); */
+        border: 1px solid  darkcyan;
+        border-top: none;
+        box-shadow: 4px 4px 4px 0px rgba(255, 255, 255, 0.194);
+
     }
     
     .listProduct > li{
@@ -178,6 +197,7 @@
         margin: 0px;
         padding:5px 0 0 0;
         font-weight: 100;
+
     }
     .fish > p:hover,
     .fishPedestal:hover,
@@ -187,6 +207,9 @@
         padding-left:13px;
         color: #fff;
         background-color:darkcyan;
+        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+        box-shadow: 7px 7px 5px 0px rgba(255, 255, 255, 0.194);
+
     }
     .fish:hover .listFish{
         display:block;
@@ -194,6 +217,7 @@
     .listFish{
         list-style: none;
         display :none;
+        /* width: 100px; */
     }
 
     

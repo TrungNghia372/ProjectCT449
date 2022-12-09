@@ -153,7 +153,7 @@
             // Cart
             async addToCart(){
                 if (this.$store.state.user==null) {
-                    // alert("Bạn phải đăng nhập để mua hàng");
+                    alert("Bạn phải đăng nhập để mua hàng");
                    this.isshowLogin=true;
                 } 
                 else {
@@ -186,7 +186,7 @@
 
     }
     .product{
-        margin-top:90px;
+        margin-top:70px;
         text-align: center;
         color:#fff;
         /* display: flex; */

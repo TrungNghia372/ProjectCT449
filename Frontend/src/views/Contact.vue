@@ -175,7 +175,7 @@
     }
     .contentContacts{
         color:black !important;
-        margin-top:90px;
+        margin-top:39px;
         height: 100%;
         width: 50%;
         padding-bottom: 30px;
@@ -183,7 +183,7 @@
         color:#fff;
     }
     .titleContact{
-        margin-top:50px;
+        margin-top:100px;
         padding:40px 0;
         font-weight:bold;
         color:#fff;

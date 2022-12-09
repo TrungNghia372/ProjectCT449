@@ -113,17 +113,17 @@
     }
     .contentNews{
         color:black !important;
-        margin-top:90px;
+        margin-top:39px;
         height: 100%;
         width: 50%;
         padding-bottom: 30px;
-        /* flex:3; */
+    
     }
     .titleNews{
         color: #fff;
         font-size: 30px;
         text-align:start;
-        padding: 10px 0 0 0px;
+        padding: 80px 0 0 0px;
         border-bottom: 2px solid #fff;
         margin: 0px 50px;
     }

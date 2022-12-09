@@ -146,11 +146,11 @@
             // Cart
             async addToCart(){
                 if (this.$store.state.user==null) {
-                    // alert("Bạn phải đăng nhập để mua hàng");
+                    alert("Bạn phải đăng nhập để mua hàng");
                    this.isshowLogin=true;
                 } 
                 else {
-                    try {
+                    try {   
                         const result = await axios.post('http://localhost:4000/api/cart/add/product',{
                         idProduct: this.fishpedestal._id,
                         quantity:  this.count,
@@ -181,7 +181,8 @@
 
     }
     .product{
-        margin-top:90px;
+        margin-top:70px;
+
         text-align: center;
         color:#fff;
         /* display: flex; */

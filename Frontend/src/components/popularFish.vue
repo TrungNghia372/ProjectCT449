@@ -2,7 +2,7 @@
     <div class="cardMain">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col"
-                v-for="(item, i) in listFish.slice(0,5)"
+                v-for="(item, i) in listFish"
                 :key="i"
             >
                 <div class="card h-100"

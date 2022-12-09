@@ -99,7 +99,7 @@
                     <img src="https://cdn-icons-png.flaticon.com/512/206/206853.png" alt="">
                     <div class="dotState"></div>
                 </div>
-                <div class="infoUser">
+                <div class="infoUsers">
                     {{this.$store.state.user.username}} 
                 </div>
          
@@ -277,7 +277,7 @@
     }
     .header {
         color : #fff;
-        height: 38px;
+        /* height: 38px; */
         width: 100%;
         background-color:#0095a8 ;
         display: flex;
@@ -325,21 +325,30 @@
         border-radius:12px;
         box-shadow: 0px 0px 10px 4px rgba(255, 255, 255, 0.812);
     }
-
+    /* .infoUser{
+        height:20px;
+    } */
     .cart,
     .login,
     .register,
-    .infoUser,
     .logout {
         align-items: center;
 
         display:flex;
         font-size: 13px;
-        padding:10px 10px;
+        padding:12px 10px;
         height:100%;
         /* overflow: ; */
         /* display: flex;
         align-items: center; */
+    }
+    .infoUser{
+        align-items: center;
+
+        display:flex;
+        font-size: 13px;
+        padding:7px;
+        height:100%;
     }
     .cart:hover,
     .login:hover,
@@ -381,7 +390,7 @@
     .Search{
         max-height: 500px;
         overflow-y: scroll;
-
+        position: absolute;
     }
     .resultSearch{
       height:100%;

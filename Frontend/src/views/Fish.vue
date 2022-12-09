@@ -2,6 +2,7 @@
     <Header/>
     <Nav/>
     <div class="product">
+
           <div class="titleProduct">
                 <p>Sản phẩm</p>
           </div>
@@ -58,18 +59,19 @@
         height:623px;
     }
     .product{
-        margin-top:90px;
+        margin-top:39px;
         background-image: url('../assets/BG.png');
         text-align: center;
         /* border-top:1px solid #0b486b; */
     }
     .titleProduct{
+        /* margin-top:40px; */
         color: #fff;
         font-size: 30px;
         text-align:start;
-        padding: 10px 0 0 0px;
+        padding: 78px 0 0 0px;
         border-bottom: 2px solid #fff;
-        margin: 0px 50px;
+        margin: 40px 50px 0px 50px;
     }
     .seeMoreProduct{
         padding: 8px 300px;

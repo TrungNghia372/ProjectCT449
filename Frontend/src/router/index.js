@@ -10,7 +10,6 @@ import DetailFish from '../views/DetailFish.vue';
 import DetailAquaticPlant from '../views/DetailAquaticPlant.vue';
 import PopularFish from '../views/PopularFish.vue';
 import Order from '../views/Order.vue';
-import AddressOrder from '../views/AddressOrder.vue';
 
 
 const router = createRouter({
@@ -27,7 +26,6 @@ const router = createRouter({
     { path: '/aquaticplant/:id', name: 'detailAquaticPlant', component: DetailAquaticPlant , },
     { path: '/popularFish/', name: 'popularFish', component: PopularFish ,},
     { path: '/order', name: 'order', component: Order,},
-    { path: '/addressOrder', name: 'addressOrder', component: AddressOrder,},
   ]
 })
 
