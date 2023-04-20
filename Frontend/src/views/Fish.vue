@@ -7,13 +7,14 @@
                 <p>Sản phẩm</p>
           </div>
           <Fish/>
-          <SeeMoreProduct v-if="isshowSeeMoreProduct"/>
+          <!-- <SeeMoreProduct v-if="isshowSeeMoreProduct"/>
           <button class="seeMoreProduct"
                   @click="onShowSeeMoreProduct"
                   >
                     {{seemore}}
-          </button>
+          </button> -->
     </div>
+    
     <Footer/>
 </template>       
 <script>
@@ -21,7 +22,7 @@
     import Footer from '../components/footer.vue';
     import Header from '../components/header.vue'
     import Fish from '../components/fish.vue';
-    import SeeMoreProduct from '../components/home/homeSeeMore.vue'
+    // import SeeMoreProduct from '../components/home/homeSeeMore.vue'
 
     export default {
         components:{
@@ -29,7 +30,7 @@
             Footer,
             Header,
             Fish,
-            SeeMoreProduct,
+            // SeeMoreProduct,
         },
         data() {
             return {

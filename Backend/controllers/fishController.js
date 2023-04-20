@@ -1,4 +1,6 @@
 const Fish = require('../models/fish')
+const FishPedestal = require('../models/fishPedestal')
+const AquaticPlant = require('../models/aquaticPlant')
 
 const fishController = {
     // Add fish
@@ -95,13 +97,38 @@ const fishController = {
     },
 
    
+    getListFishPage: async(req,res) => {
+        try {
 
+            console.log('jkashjkasdkjdaskjn');
 
+            // const pageSize   = req.query.pageSize;
+            // const pageNumber = req.query.pageNumber;
 
+            const listFish = await Fish.find({});
+            // const listFishPedestal = await FishPedestal.find({});
+            // const listAquaticPlant = await AquaticPlant.find({});
+            // const listProduct      = await listFish.concat(listAquaticPlant, listFishPedestal);    
 
+            // var i = ((pageNumber-1)*pageSize);
+            // var j = parseInt(pageSize)+i;
+            // var k = 0 ;
     
+            // var result = [];
+            // for (i ; i <= j; i++){
+            //     k++;
+            //     result[k] = listProduct[i];
+            // }
 
 
+            // console.log(result);
+
+            res.status(200).json(listFish);
+            // res.status(200).json({result: result,totalRecord: listProduct.length});
+        } catch (error) {
+            res.status(500).json(error);
+        }
+    }
 }
 
 module.exports = fishController;

@@ -28,4 +28,6 @@ router.get('/suggest/suggestFish',fishController.getSuggestFish);
 // popular fish
 router.get('/popular/list',fishController.getPopularFish);
 
+// page
+router.get('/product/page',fishController.getListFishPage);
 module.exports = router;

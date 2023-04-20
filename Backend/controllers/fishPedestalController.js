@@ -79,6 +79,12 @@ const fishPedestalController = {
             res.status(500).json(error);
         }
     },
-}
 
+   
+
+    
+
+    
+
+} 
 module.exports = fishPedestalController;
