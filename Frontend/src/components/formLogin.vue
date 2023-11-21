@@ -1,84 +1,68 @@
 <template>
-    <div class="modalForm" 
-    @click.self="onCloseFormLogin"
-        >
-
-        <div class="formLogin"   >
+    <div class="modalForm" @click.self="onCloseFormRegister">
+        <div class="formRegister">
             <div class="headerForm">
                 <div class="logo">
-                    <img src="../assets/logo2.png" alt="">
+                    <img src="../assets/Library.png" alt="">
                 </div>
-                <div class="home">
-                     <p
-                     @click="gotoHome"><i class="fa-solid fa-house"></i></p>
-                </div>
+                
             </div>
-
             <div class="formMain">
                 <div class="titleForm">
                     <h2>
                         ĐĂNG NHẬP
                     </h2>
-                    <p>
-                        Bạn có muốn tạo tài khoản? <span class="Register" @click.self="gotoRegister">  Register </span>
-                       
-                       
-                    </p>
                 </div>
-
                 <div class="contentForm">
-                    <form class="formContentLogin"
-                          @submit.prevent="login"
-                          >
+                    <form class="formContentLogin" @submit.prevent="login">
                         <div class="form__field">
                             <label for="username">Tài khoản</label>
-                            <input type="text" name="username" placeholder="Nhập tài khoản mới" v-model="username">
+                            <input type="text" name="username" placeholder="Nhập tài khoản..." v-model="username">
                         </div>
 
                         <div class="form__field">
                             <label for="psw">Mật khẩu</label>
-                            <input type="password" name="psw" placeholder="Nhập mật khẩu mới vào" v-model="psw">
+                            <input type="password" name="psw" placeholder="Nhập mật khẩu..." v-model="psw">
                         </div>
 
-                        <div class="form__field ">
-                            <button class="submit_btn" type="submit">Login</button>
+                        <div class="form__field " style="text-align: center;">
+                            <button class="submit_btn" type="submit">Đăng nhập</button>
                         </div>
                     </form>
-                    
+
+                    <div class="formMain">
+                        <p>
+                            Bạn chưa có tài khoản?
+                            <span class="Login" @click.self="gotoRegister"> Đăng ký </span>
+                        </p>
+                    </div>
+
                 </div>
 
                 <div class="iconForm">
-                    <!-- facebook -->
-                    <a  class="btn text-white btn-floating m-1"
-                        style="background-color: #3b5998;"
-                        href="#!"
-                        role="button">
-                        <i class="fab fa-facebook-f"></i>
+
+                    <a class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="#!" role="button">
+                        <i class="fa-brands fa-facebook"></i>
                     </a>
-                    <!-- Google -->
-                    <a  class="btn text-white btn-floating m-1"
-                        style="background-color: #dd4b39;"
-                        href="#!"
-                        role="button">
-                        <i class="fab fa-google"></i>
+
+                    <a class="btn text-white btn-floating m-1" style="background-color: #dd6839;" href="#!" role="button">
+                        <i class="fa-brands fa-square-instagram"></i>
                     </a>
-                    <!-- Github -->
-                    <a  class="btn text-white btn-floating m-1"
-                        style="background-color: #333333;"
-                        href="#!"
-                        role="button">
-                        <i class="fab fa-github"></i>
+
+                    <a class="btn text-white btn-floating m-1" style="background-color: #39a6dd;" href="#!" role="button">
+                        <i class="fa-brands fa-twitter"></i>
                     </a>
+
                 </div>
-            </div> 
+            </div>
 
         </div>
     </div>
 </template>
 <script>
-   import axios from 'axios';
+import axios from 'axios';
 
-   export default {
+export default {
     // props:[
     //     "getInfoUsername"
     // ],
@@ -88,140 +72,170 @@
             psw: "",
         }
     },
-    
+
     methods: {
-        onCloseFormLogin(){
+        onCloseFormLogin() {
             this.$emit("cancelFormLogin");
         },
-        gotoHome(){
-            this.$router.push({ name: 'home'});
+        gotoHome() {
+            this.$router.push({ name: 'home' });
         },
-        gotoRegister(){
-             this.$emit("gotoRegister");
-        }, 
-        
-        
-        async login(){
-            // console.log(this.username + this.psw);
+        gotoRegister() {
+            this.$emit("gotoRegister");
+        },
+        // gotoAdmin() {
+        //     this.$router.push({ name: 'admin' });
+        // },
 
-            // this.getInfoUsername(this.username);
 
-            var result = await axios.post('http://localhost:4000/api/auth/login',{
+        async login() {
+
+            var result = await axios.post('http://localhost:4000/api/auth/login', {
                 username: this.username,
                 psw: this.psw,
-            });  
-            
+            });
+
             if (result.data != false) {
                 localStorage.setItem("token",result.data);
                 this.onCloseFormLogin();
-                // this.$emit("showLogout");
+                // if ()
+                // console.log("oookok",result.data)
+                // this.gotoAdmin();
+                // let user = this.$store.state.user;
+                // if (user.isAdmin)
+                    // this.$router.push({ name: 'admin' });
+
                 location.reload();
+                // console.log(this.username, this.password);
             }
             else {
-                alert("Nhập sai tài khoản hoặc mật khẩu");
+                alert("Tài khoản hoặc mật khẩu không đúng!");
             }
         },
 
     },
-   }
+}
+
 </script>
 
 <style scoped>
-    p{
-        margin:0px;
-        padding:0px;
-    }
-    .modalForm{
-        background-color: rgba(0, 0, 0, 0.475);
-        position: fixed;
-        top:0;
-        left:0;
-        right:0;
-        bottom: 0;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 5;
-        color: #B0E3C7;
-    }
-    .formLogin{
-        background-image: url('../assets/BG.png') ;
-        height:400px;
-        width: 350px;
-        border-radius: 0 35px 0 35px;
-        /* z-index: 10; */
-        box-shadow: 7px 7px 5px 0px rgba(255, 255, 255, 0.194);
-    }
-    .headerForm{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-top:10px;
-    }
-    .headerForm .home{
-        font-weight: bold;
-    }
-    .logo > img{
-        /* height:150px; */
-        height:50px;
-        width: 100%;
-    }
-    .home{
-        margin-right:20px;
-        cursor:pointer;
-    }
-    .formMain{
-        padding: 30px;
-    }
-    .titleForm > h2{
-        font-weight: bold;
-    }
-    .titleForm > p > a{
-        text-decoration: none;
-    }
-    .contentForm{
-        border-bottom:1px solid #B0E3C7;
-    }
-    .form__field{
-        padding:5px 0;
-    }
-    .form__field > input {
-        border-radius:0 10px;
-        border:2px solid #B0E3C7;
-        width:100%;
-        padding: 2px 20px;
-    }
-    .submit_btn{
-        /* width: 70px; */
-        border:2px solid #B0E3C7;
-        border-radius:0 10px;
-        padding:5px 20px;
-        /* padding:0 20px !important; */
-    }
-    .form__field > input:hover{
-        box-shadow: 2px 2px 5px 0px rgba(255, 255, 255, 0.582);
-        color:darkcyan;
-        font-weight: bold;
-        margin-left:10px;
-    }
-    
-    .submit_btn:hover{
-        box-shadow: 2px 2px 5px 0px rgba(255, 255, 255, 0.582);
-        color:darkcyan;
-        font-weight: bold;
-        margin-left:10px;
-    }
-    .iconForm{
-        display:flex;
-        justify-content: space-evenly;
-    }
-    .Register{
-        color:crimson;
-        cursor: pointer;
-    }
-    .Register:hover{
-        color:#fff;
-        font-weight: bold;
-    }
+.modalForm {
+    background-color: rgba(151, 104, 104, 0.475);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    color: #B0E3C7;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.formRegister {
+    background-color: rgb(92, 180, 204);
+    height: 460px;
+    width: 350px;
+    border-radius: 10px;
+
+    box-shadow: 7px 7px 5px 0px rgba(255, 255, 255, 0.194);
+}
+
+.headerForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.headerForm .home {
+    font-weight: bold;
+}
+
+.logo>img {
+    height: 50px;
+    width: 100%;
+
+}
+
+.home {
+    margin-right: 20px;
+    cursor: pointer;
+    height: 30px;
+}
+
+.formMain {
+    padding: 10px;
+
+}
+
+.titleForm>h2 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.titleForm>p>a {
+    text-decoration: none;
+}
+
+.contentForm {
+    border-bottom: 1px solid #B0E3C7;
+}
+
+.form__field {
+    padding: 5px 0;
+}
+
+.form__field>input {
+    /*     border-radius:10px;*/
+
+    border: 2px solid #B0E3C7;
+    width: 100%;
+    padding: 2px 20px;
+}
+
+.submit_btn {
+    border: 2px solid #B0E3C7;
+    /* border-radius:10px;*/
+
+    padding: 5px 20px;
+}
+
+.form__field>input:hover {
+    box-shadow: 2px 2px 5px 0px rgba(255, 255, 255, 0.582);
+    color: darkcyan;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.submit_btn:hover {
+    box-shadow: 2px 2px 5px 0px rgba(255, 255, 255, 0.582);
+    color: darkcyan;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.iconForm {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+.Login {
+    color: crimson;
+    cursor: pointer;
+}
+
+.Login:hover {
+    color: #fff;
+    font-weight: bold;
+}
 </style>

@@ -2,130 +2,118 @@
     <div class="news">
         <Header/>
         <Nav/>
-    <div class="generality">
-        <div class="contentContacts">
-            <div class="titleContact">
-                <h2>Liên Hệ AI</h2>
-            </div>
-            <div class="iconContact">
-              
-                <!-- facebook -->
-                <a  class="btn text-white btn-floating m-1"
-                    style="background-color: #3b5998;"
-                    href="#!"
-                    role="button">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <!-- Twitter -->
-                <a class="btn text-white btn-floating m-1"
-                    style="background-color: #55acee;"
-                    href="#!"
-                    role="button">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <!-- Google -->
-                <a  class="btn text-white btn-floating m-1"
-                    style="background-color: #dd4b39;"
-                    href="#!"
-                    role="button">
-                    <i class="fab fa-google"></i>
-                </a>
-                <!-- Instagram -->
-                <a  class="btn text-white btn-floating m-1"
-                    style="background-color: #ac2bac;"
-                    href="#!"
-                    role="button">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <!-- Linkedin -->
-                <a  class="btn text-white btn-floating m-1"
-                    style="background-color: #0082ca;"
-                    href="#!"
-                    role="button">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <!-- Github -->
-                <a  class="btn text-white btn-floating m-1"
-                    style="background-color: #333333;"
-                    href="#!"
-                    role="button">
-                    <i class="fab fa-github"></i>
-                </a>
-            
-            </div>
-            <div class="bodyContact">
-                <div class="titlesubContact">
-                    <h3>BUÔN BÁN CÁ THỦY SẢN CHO NGƯỜI BÁN LẺ</h3>
+        <div class="generality">
+            <div class="contentContacts">
+                <div class="titleContact">
+                    <h2>Thông tin của Feet Dynamic</h2>
                 </div>
-                <div class="locateContact">
-                    <div class="contentsubContact">
-                        <div>
-                            <p>
-                                Chúng tôi cung cấp hàng trăm cửa hàng vật nuôi và cá cảnh trên khắp nước Úc với rất nhiều chủng loại cá cảnh bán buôn, thức ăn cho cá và các sản phẩm cá cảnh khác.
-                            </p>
-                            <p>
-                                Nếu bạn có một cửa hàng thú cưng hoặc cá cảnh và muốn tìm hiểu thêm về cách mở tài khoản với Aquarium Industries, vui lòng điền vào biểu mẫu Trở thành nhà bán lẻ Aquarium Industries của chúng tôi. Chúng tôi cũng liệt kê một số lợi ích của việc trở thành nhà bán lẻ AI đã đăng ký tại đây.
-                            </p>
-                        </div>
-                        <div class="imgcontentsubContact">
-                            <img src="https://www.aquariumindustries.com.au/wp-content/uploads/2015/05/FactoryPicLR2.jpg" alt="">
-                        </div>
+                
+                <div class="iconContact">
+                  
+                    <!-- facebook -->
+                    <a  class="btn text-white btn-floating m-1"
+                        style="background-color: #3b5998;"
+                        href="#!"
+                        role="button">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <!-- Twitter -->
+                    <a class="btn text-white btn-floating m-1"
+                        style="background-color: #55acee;"
+                        href="#!"
+                        role="button">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <!-- Google -->
+                    <a  class="btn text-white btn-floating m-1"
+                        style="background-color: #dd4b39;"
+                        href="#!"
+                        role="button">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <!-- Instagram -->
+                    <a  class="btn text-white btn-floating m-1"
+                        style="background-color: #ac2bac;"
+                        href="#!"
+                        role="button">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <!-- Linkedin -->
+                    <a  class="btn text-white btn-floating m-1"
+                        style="background-color: #0082ca;"
+                        href="#!"
+                        role="button">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <!-- Github -->
+                    <a  class="btn text-white btn-floating m-1"
+                        style="background-color: #333333;"
+                        href="#!"
+                        role="button">
+                        <i class="fab fa-github"></i>
+                    </a>
+                
+                </div>
+                <div class="bodyContact">
+                    <div class="titlesubContact">
+                        <h3>Những Hình Ảnh Chính Thức Của Air Jordan 1 High “Lucky Green”</h3>
                     </div>
-                    <p>
-                        Nếu bạn là khách hàng hiện tại và yêu cầu của bạn liên quan đến Đơn hàng hiện tại mà bạn đã đặt, vui lòng gửi email tới order@aquariumindustries.com.au trong giờ hành chính của chúng tôi.
-                    </p>
-                    <h6>
-                        Để được tư vấn cách chăm sóc cá của bạn:
-                    </h6>
-                    <p>
-                        Chúng tôi xin lỗi rằng do khối lượng công việc, chúng tôi không thể trả lời các câu hỏi chăm sóc cá mà chúng tôi nhận được từ công chúng. Để được tư vấn về cách chăm sóc cá của bạn và cách duy trì một bể cá khỏe mạnh, chúng tôi đã tạo Trường học bao gồm các khóa đào tạo chăm sóc cá miễn phí, cùng với hàng trăm Tờ chăm sóc có thể tải xuống miễn phí. Nhà bán lẻ Cá gần nhất của bạn cũng sẽ có thể cung cấp cho bạn lời khuyên tuyệt vời và các sản phẩm phù hợp.
-                    </p>
-                    <h4 style="color:#1986e6">
-                        Các khóa đào tạo chăm sóc cá miễn phí khi bạn đến thăm Trường
-                    </h4>
-                    <p>
-                        Đối với các câu hỏi về nhà bán lẻ nói chung, vui lòng điền vào biểu mẫu bên dưới. Đối với các thắc mắc liên quan đến việc mở tài khoản: thay vào đó vui lòng điền vào biểu mẫu trên trang này.
-                    </p>
-                    <p>
-                        Biểu mẫu liên hệ này dành cho các yêu cầu không khẩn cấp. Chúng tôi sẽ trả lời yêu cầu của bạn trong vòng 2 ngày làm việc.
-                    </p>
+                    <div class="locateContact">
+                        <div class="contentsubContact">
+                            <div>
+                                <p>
+                                    Những hình ảnh chính thức đầu tiên của Air Jordan 1 “Lucky Green” đã xuất hiện trên trang web của Nike.
+                                </p>
+                                <p>
+                                    Tại thời điểm này, vẫn chưa có thông tin chính thức từ Nike về ngày phát hành – và “Lucky Green” không được bao gồm trong bộ sưu tập Air Jordan Xuân 2023 của Jordan Brand, được tiết lộ chính thức vào tháng 12 – nhưng nếu những thông tin ban đầu được xác nhận, “Lucky Green” sẽ được phát hành vào ngày 15 tháng 4 với giá 170 USD. Ngày phát hành dự kiến vẫn là ngày 15 tháng 4.
+                                </p>
+                            </div>
+                            <div class="imgcontentsubContact">
+                                <img src="https://www.aquariumindustries.com.au/wp-content/uploads/2015/05/FactoryPicLR2.jpg" alt="">
+                            </div>
+                        </div>
+                        <p>
+                            Nếu bạn là khách hàng hiện tại và yêu cầu của bạn liên quan đến Đơn hàng hiện tại mà bạn đã đặt, vui lòng gửi email tới order@aquariumindustries.com.au trong giờ hành chính của chúng tôi.
+                        </p>
+                        <h6>
+                            Để được tư vấn các sản phẩm giày:
+                        </h6>
+                        <p>
+                            Bảng màu trên phiên bản tái phát hành này là một sự gợi nhớ đến Boston Celtics – một trong những đối thủ của Jordan và Bulls trong thương hiệu Jordan trong thập niên 90. Màu chủ đạo phản ánh tông màu chính của đội bóng phía Đông và được nhấn mạnh ở các nắp, dây giày và lớp phủ gót chân dưới. Khối màu “Black Toe” phổ biến với những đường Swoosh đen đậm, và lớp phủ được đặt trên những vùng trắng và hộp ngón chân cũng được sử dụng. Sự khác biệt chính của phiên bản này là thương hiệu trên lưỡi giày đã được sửa đổi. Thay vì biểu tượng Jumpman, thương hiệu Nike Air được trang trí trên lưỡi giày.
+                        </p>
+                     
+                    </div>
+                </div>
+            </div>
+            <div class="differenceNews">
+                <div>
+                    <img src="https://www.aquariumindustries.com.au/wp-content/uploads/2016/04/linkedIn-joing.png" alt="">
+                </div>
+                <div>
+                    <img src="https://www.aquariumindustries.com.au/wp-content/uploads/2016/07/WholesaleAquariumFish-1.png" alt="">
+                </div>
+                <div class="ViewProduct">
+                    <div>
+                        <img class="imgView" src="https://i.pinimg.com/236x/4f/47/09/4f47095a6fb351a87766f0d13eeedcca.jpg" alt="">
+                        <img class="imgView" src="https://saigonsneaker.com/wp-content/uploads/2020/01/IMG_2215-2-400x400.jpg.webp" alt="">
+                        <img class="imgView" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_6T_R4ehEp2CC8Rz8qL2ZJqxFOn2cPAjPRg&usqp=CAU" alt="">
+                    </div>
+                    <div>
+                        <img class="imgView" src="https://i.pinimg.com/236x/56/1c/f9/561cf9944bcae740070d4c82ccb99933.jpg" alt="">
+                        <img class="imgView" src="https://saigonsneaker.com/wp-content/uploads/2020/02/Screenshot-2022-12-20-153619-350x350.jpg.webp" alt="">
+                        <img class="imgView" src="https://i.pinimg.com/236x/56/1c/f9/561cf9944bcae740070d4c82ccb99933.jpg" alt="">   
+                    </div>
+                    <div>
+                        <img class="imgView" src="https://i.pinimg.com/236x/d7/c1/3e/d7c13eb638981e7ee4a2b42858cfde44.jpg" alt="">
+                        <img class="imgView" src="https://i.pinimg.com/236x/46/37/a0/4637a09fc2d65766501b7e19754932f3.jpg" alt="">
+                        <img class="imgView" src="https://i.pinimg.com/236x/67/40/96/6740969d346063ecf7f3a06983576074.jpg" alt="">
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="differenceNews">
-            <div>
-                <img src="https://www.aquariumindustries.com.au/wp-content/uploads/2016/04/linkedIn-joing.png" alt="">
-            </div>
-            <div>
-                <img src="https://www.aquariumindustries.com.au/wp-content/uploads/2016/07/WholesaleAquariumFish-1.png" alt="">
-            </div>
-            <div>
-                <div>
-                    <img src="https://www.aquariumindustries.com.au/wp-content/uploads/2015/05/Marine_Clownfish_OW_F-150x150.png" alt="">
-                    <img src="https://www.aquariumindustries.com.au/wp-content/uploads/2015/05/Betta_Male_Crown_F-150x150.png" alt="">
-                    <img src="https://www.aquariumindustries.com.au/wp-content/uploads/2015/05/Betta_Male_OceanGreen-150x150.png" alt="">
-                </div>
-                <div>
-                    <img src="https://www.aquariumindustries.com.au/wp-content/uploads/2015/05/Barb_Rosy_F-PC-150x150.png" alt="">
-                    <img src="https://www.aquariumindustries.com.au/wp-content/uploads/2015/02/Loach_Clown_F-PC-150x150.png" alt="">
-                    <img src="https://www.aquariumindustries.com.au/wp-content/uploads/2015/02/Guppy_Female_Asst_F-PC-150x150.png" alt="">   
-                </div>
-                <div>
-                    <img src="https://www.aquariumindustries.com.au/wp-content/uploads/2015/02/Guppy_Male_Asst_F-150x150.png" alt="">
-                    <img src="https://www.aquariumindustries.com.au/wp-content/uploads/2015/02/Catfish_Bristlenose_F-150x150.png" alt="">
-                    <img src="https://www.aquariumindustries.com.au/wp-content/uploads/2015/06/Angel_Gold-150x150.png" alt="">
-                </div>
-            </div>
-            <div>
-                <img src="https://scontent.fsgn5-12.fna.fbcdn.net/v/t39.30808-6/315244227_8440028779402103_2115097560396360815_n.png?stp=dst-png_s552x414&_nc_cat=103&ccb=1-7&_nc_sid=8024bb&_nc_ohc=khUchXBJDHIAX-iHgEc&_nc_ht=scontent.fsgn5-12.fna&edm=AEDRbFQEAAAA&oh=00_AfA-lgQ5qG-J2_g7Gp4M-BQNV5_ltA-j9fI51g-pfvBGFg&oe=63770C84" alt="">
-            </div>
-            <!-- <div>
-                <video src="blob:https://www.facebook.com/203c8b39-3b09-40ce-ad16-1a4a84322d36">ok</video>
-            </div> -->
-            <div>
-                <h3>HÃY CẬP NHẬT THƯỜNG XUYÊN</h3>
-            </div>
-        </div>
+    <div class="footer_product">
+        <img src="https://nouthemes.net/html/trueshoes/images/banner/home-banner-1.png" alt="">
+        <img src="https://nouthemes.net/html/trueshoes/images/banner/home-banner-2.png" alt="">
     </div>
         <Footer/>
     </div>
@@ -166,11 +154,11 @@
         margin: 0px;
     }
     .news{ 
-        color:#fff;
+        color:black;
 
     }
     .generality{
-        background-image: url('../assets/BG.png');
+        
         display: flex;
     }
     .contentContacts{
@@ -180,13 +168,13 @@
         width: 50%;
         padding-bottom: 30px;
         padding-left: 30px;
-        color:#fff;
+        color:black;
     }
     .titleContact{
         margin-top:100px;
         padding:40px 0;
         font-weight:bold;
-        color:#fff;
+        color:black;
         font-size:50px;
         background-color: #0065bd;
         text-align: center;
@@ -198,7 +186,7 @@
         padding:30px 0;
     }
     .bodyContact{
-        color:#fff;
+        color:black;
     }
     .contentsubContact{
         display: flex;
@@ -209,7 +197,7 @@
 
 
     .differenceNews{
-        color:#fff !important;
+        color:black !important;
         margin-top:90px;
         height: 100%;
         width: 50%;
@@ -226,4 +214,25 @@
     .differenceNews>div>div>img{
         padding:0px 10px;
     }
+    .ViewProduct{
+        display:flex;
+        flex:1;
+        padding-right: 50px;
+        min-height: 500px;
+
+    }
+    .imgView{
+        max-height:170px;
+        min-width: 170px;
+        padding:5px 0px!important; 
+    }
+    .footer_product{
+        margin-top: -100px;
+        display: flex;
+        justify-content: space-around;
+       }
+    .footer_product > img {
+            width:760px;
+            height: 250px;
+        }
 </style>

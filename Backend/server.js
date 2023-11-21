@@ -9,27 +9,29 @@ const cookieParser = require('cookie-parser');
 
 
 //router
-const fishRoute = require('./routes/Fish');
-const aquaticPlantRoute = require('./routes/AquaticPlant');
-const fishPedestalRoute = require('./routes/FishPedestal');
+const bookRoute = require('./routes/Book');
 const productRoute = require('./routes/Product');
 const authRoute = require('./routes/Auth');
-const userRoute = require('./routes/user');
+const userRoute = require('./routes/User');
 const newsRoute = require('./routes/News');
 const cartsRoute = require('./routes/Carts');
 //------------------------------------------
 
 dotenv.config();
-//Connect Database with Mongoose
-mongoose.connect((process.env.MONGODB_URL),() => {
-    console.log('Connect to database with mongoose');
-})
+
+
+mongoose.connect("mongodb+srv://trunghieu:w5NEz8qg@cluster0.juwgljj.mongodb.net/").then(()=>{
+    console.log('connect successed DB');
+}).catch(()=>{console.log('error connect DB')})
+
 //-------------------------------------------
-const createMongoose = require('./data/dataFish');
+// const createMongoose = require('./data/dataBook');
 // lay data cho home
+
 // createMongoose.createDataFishPedestal();
-// createMongoose.createDataFish();
+// createMongoose.createDataFish(); 
 // createMongoose.createDataAquaticPlant();
+
 // createMongoose.createDataNews(); 
 //-------------------------------------------
 
@@ -38,10 +40,9 @@ app.use(cors());
 app.use(morgan('common'));
 app.use(cookieParser());
 //Routes
-app.use("/api/fish",fishRoute);
-app.use("/api/aquaticPlant",aquaticPlantRoute);
-app.use("/api/fishPedestal",fishPedestalRoute);
-// app.use("/api/product",productRoute);
+app.use("/api/book",bookRoute);                     //------------------------------------------da lam
+
+app.use("/api/product",productRoute);
 app.use("/api/auth",authRoute);
 app.use("/api/user",userRoute);
 app.use("/api/news",newsRoute);

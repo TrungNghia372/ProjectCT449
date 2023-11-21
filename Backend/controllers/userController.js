@@ -11,6 +11,7 @@ const userController = {
             res.status(500).json(error);
         }
     },
+    // get user by user
     // Delete user
     deleteUser: async(req,res) => {
         try {

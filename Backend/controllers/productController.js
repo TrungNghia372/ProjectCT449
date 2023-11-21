@@ -1,17 +1,13 @@
-const Fish = require('../models/fish')
-const FishPedestal = require('../models/fishPedestal')
-const AquaticPlant = require('../models/aquaticPlant')
+const Book = require('../models/book')
 
 const productController = {
     getProduct : async(req,res) => {
         try {
-            const listFish = await Fish.find({});
-            const listFishPedestal = await FishPedestal.find({});
-            const listAquaticPlant = await AquaticPlant.find({});
-            const listProduct = listProduct.concat(listFish, listFishPedestal, listAquaticPlant);
+            const listBook = await Book.find({});
+            const listProduct = listProduct.concat(listBook);
          
             //   console.log(listProduct);
-            res.status(200).json(listFish);
+            res.status(200).json(listBook);
         } catch (error) {
             console.log(error);
         }

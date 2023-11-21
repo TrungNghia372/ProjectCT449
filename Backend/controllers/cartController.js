@@ -1,8 +1,6 @@
 const Cart = require('../models/cart');
 const Order = require('../models/order');
-const Fish = require('../models/fish');
-const FishPedestal = require('../models/fishPedestal');
-const AquaticPlant = require('../models/aquaticPlant');
+const Book = require('../models/book');
 const mongoose = require('mongoose')
 
 const cartController = {
@@ -35,7 +33,7 @@ const cartController = {
     },
     getCartProduct: async(req,res)=>{
         try {
-            const resultFish = await Order.aggregate([
+            const resultBook = await Order.aggregate([
                 {
                     "$match": {
                         "idCart": mongoose.Types.ObjectId(req.query.idCart)
@@ -43,7 +41,7 @@ const cartController = {
                 },
                 {
                     "$lookup": {
-                        "from": "fish",
+                        "from": "books",
                         "localField": "idProduct",
                         "foreignField": "_id",
                         "as": "list"
@@ -51,53 +49,8 @@ const cartController = {
                 }
             ]);
 
-            const resultFishPedestal = await Order.aggregate([
-                {
-                    "$match": {
-                        "idCart": mongoose.Types.ObjectId(req.query.idCart)
-                    }
-                },
-                {
-                    "$lookup": {
-                        "from": "fishpedestals",
-                        "localField": "idProduct",
-                        "foreignField": "_id",
-                        "as": "list"
-                    }
-                }
-            ]);
-
-            const resultAquaticPlant = await Order.aggregate([
-                {
-                    "$match": {
-                        "idCart": mongoose.Types.ObjectId(req.query.idCart)
-                    }
-                },
-                {
-                    "$lookup": {
-                        "from": "aquaticplants",
-                        "localField": "idProduct",
-                        "foreignField": "_id",
-                        "as": "list"
-                    }
-                }
-            ]);
             var arr = []
-            resultFish.forEach(item=>{
-                if(item.list[0]){
-                    var obj = {...item.list[0]}
-                    obj.quantity = item.quantity
-                    arr.push(obj)
-                }
-            })
-            resultFishPedestal.forEach(item=>{
-                if(item.list[0]){
-                    var obj = {...item.list[0]}
-                    obj.quantity = item.quantity
-                    arr.push(obj)
-                }
-            })
-            resultAquaticPlant.forEach(item=>{
+            resultBook.forEach(item=>{
                 if(item.list[0]){
                     var obj = {...item.list[0]}
                     obj.quantity = item.quantity
