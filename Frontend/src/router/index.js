@@ -8,9 +8,12 @@ import Admin from '../views/Admin.vue';
 import AddBook from '../views/AddBook.vue';
 import DetailBook from '../views/DetailBook.vue';
 import UpdateBook from '../views/UpdateBook.vue';
+import UpdatePublisher from '../views/UpdatePublisher.vue';
 import Rule from '../views/Rule.vue';
 import News from '../views/News.vue';
 import DetailBookAdmin from '../views/DetailbookAdmin.vue';
+import DetailPublisher from '../views/DetailPublisher.vue';
+import AddPublisher from '../views/AddPublisher.vue';
 
 
 
@@ -29,8 +32,11 @@ const router = createRouter({
     // admin
     { path: '/admin',name: 'admin', component: Admin,},
     { path: '/admin/addbook',name: 'addbook', component: AddBook,},
+    { path: '/admin/addpublisher',name: 'addpublisher', component: AddPublisher,},
     { path: '/admin/detailbookadmin', name: 'detailbookadmin', component: DetailBookAdmin},
-    { path: '/admin/detailbook/updatebook', name: 'updatebook', component: UpdateBook},
+    { path: '/admin/detailpublisher', name: 'detailpublisher', component: DetailPublisher},
+    { path: '/admin/detailbook/updatebook/:id', name: 'updatebook', component: UpdateBook},
+    { path: '/admin/detailpublisher/updatepublisher/:id', name: 'updatepublisher', component: UpdatePublisher},
     { path: '/admin/rule', name: 'rule', component: Rule},
     
   ]

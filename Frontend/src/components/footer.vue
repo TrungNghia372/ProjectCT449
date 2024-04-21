@@ -3,9 +3,9 @@
 
         <div class="footer-left">
     
-          <h3><span style="font-family: 'Homemade Apple', cursive;">Future Book Library</span></h3>
+          <h3><span style="font-family: 'Homemade Apple', cursive;">Book_TN372</span></h3>
     
-          <p class="footer-company-name">Bản quyền thuộc về @NguyenTrungHieu</p>
+          <p class="footer-company-name">Bản quyền thuộc về @QuachTrungNghia</p>
         </div>
     
         <div class="footer-center">
@@ -17,12 +17,12 @@
     
           <div>
             <i class="fa fa-phone"></i>
-            <p>(+84) 353514931</p>
+            <p>(+84) 326117003</p>
           </div>
     
           <div>
             <i class="fa fa-envelope"></i>
-            <p><a href="hieub2005672@student.ctu.edu.vn">hieub2005672@student.ctu.edu.vn</a></p>
+            <p><a href="hieub2005672@student.ctu.edu.vn">nghiab2005725@student.ctu.edu.vn</a></p>
           </div>
     
         </div>
@@ -30,7 +30,7 @@
         <div class="footer-right">
     
           <p class="footer-company-about">
-            <span>Future Book Library</span>
+            <span>Book_TN372</span>
             Đối với những cuốn sách hay, vấn đề không phải là bạn đọc xong bao nhiêu cuốn mà là bạn có thể đọc được bao nhiêu cuốn
           </p>
     
@@ -89,7 +89,7 @@ section {
 
 .footer-distributed {
 	background-size: 100%;
-	background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+	background-image: linear-gradient(to right, rgba(79, 218, 111, 0.37) 0%, #299e7b 100%);
 	background-repeat: no-repeat;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;

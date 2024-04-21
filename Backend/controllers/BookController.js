@@ -28,7 +28,7 @@ const bookController = {
             res.status(500).json(error);
         }
     },
-    // Get a fish
+    // Get a book
     getABook: async(req,res) => {
         try {
             const aBook = await Book.findById(req.params.id);
@@ -37,7 +37,7 @@ const bookController = {
             res.status(500).json(error);
         }
     },
-    // Update fish
+    // Update book
     updateBook: async(req,res) => {
         try {
             const aBook = await Book.findById(req.params.id);
@@ -47,7 +47,7 @@ const bookController = {
             res.status(500).json(error);
         }
     },
-    // Delete fish
+    // Delete 
     deleteBook: async(req,res) => {
         try {
             console.log("delete Book");

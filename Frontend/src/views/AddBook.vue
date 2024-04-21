@@ -101,7 +101,6 @@ export default {
           text: "Sách đã được thêm thành công!",
         });
 
-        // console.log("Data:---",this.name,this.author,this.type,this.manufactureOfYear,this.quantity,this.description, this.img);
       } catch (error) {
         console.log(error);
       }
@@ -112,7 +111,7 @@ export default {
 
 <style scoped>
 .titlee {
-  margin-top: 55px;
+  margin-top: 100px;
   text-shadow: 0 2px 2px #ffffff, 0 4px 4px #fff, 0 6px 6px #56b4df;
   padding-top: 25px;
   padding-bottom: 15px;

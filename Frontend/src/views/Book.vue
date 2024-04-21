@@ -3,8 +3,10 @@
     <Nav/>
     <div class="product">
 
-          <div class="titleProduct">
-                <p>Future Book Library - Sách mở ra trước mắt ta những chân trời mới</p>
+          <div class="titleProduct container">
+            <hr>
+                <p>Thư Viện Sách</p>
+            <hr>
           </div>
           <Book/>
           <!-- <SeeMoreProduct v-if="isshowSeeMoreProduct"/>
@@ -63,7 +65,7 @@
         margin-top:39px;
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        background-image: url('https://img.freepik.com/free-vector/abstract-smooth-liquid-banner-presentation-backdrop_1017-42992.jpg?w=1380&t=st=1683732500~exp=1683733100~hmac=177932f17dbb2bcbee22339f3e7d91ae76ba5ac8e893ccd067b84b3114f09260');
+        /* background-image: url('https://img.freepik.com/free-vector/abstract-smooth-liquid-banner-presentation-backdrop_1017-42992.jpg?w=1380&t=st=1683732500~exp=1683733100~hmac=177932f17dbb2bcbee22339f3e7d91ae76ba5ac8e893ccd067b84b3114f09260'); */
     
         text-align: center;
         /* border-top:1px solid #0b486b; */
@@ -72,10 +74,10 @@
         /* margin-top:40px; */
         color: black;
         font-size: 30px;
-        text-align:start;
+        text-align: center;
         padding: 78px 0 0 0px;
         border-bottom: 2px solid #fff;
-        margin: 40px 50px 0px 50px;
+        /* margin: 40px 50px 0px 50px; */
     }
     .seeMoreProduct{
         padding: 8px 300px;

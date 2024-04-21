@@ -4,40 +4,32 @@
     </div>
     <div class="detailbook">
         <div class="titlee">
-            <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif">THÔNG TIN SÁCH</h1>
+            <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif">THÔNG TIN NHÀ XUẤT BẢN</h1>
             <div class="search-box">
                 <input type="text" class="search-input" placeholder="Tìm kiếm...">
                 <i class="fa-solid fa-magnifying-glass"></i>
 
             </div>
         </div>
-        <table class="book-info">
+        <table class="book-info container">
             <thead>
                 <tr>
                     <th>STT</th>
-                    <th>Tên sách</th>
-                    <th>Tác giả</th>
-                    <th>Loại sách</th>
-                    <th>Năm sản xuất</th>
-                    <th>Số lượng</th>
-                    <th>Mô tả sách</th>
+                    <th>Tên nhà xuất bản</th>
+                    <th>Địa chỉ</th>
                     <th>Cập nhật</th>
                     <th>Xóa</th>
                 </tr>
             </thead>
             <tbody 
-                v-for="(book,i) in listBooks">
+                v-for="(publisher,i) in listPublishers">
                     <tr :key="i">
                         <td style="text-align: center;" >{{i+1}}</td>
-                        <td>{{book.name}}</td>
-                        <td>{{book.author}}</td>
-                        <td>{{book.type}}</td>
-                        <td style="text-align: center;">{{book.manufactureOfYear}}</td>
-                        <td style="text-align: center;">{{book.quantity}}</td>
-                        <td>{{book.description}}</td>
-                        <td><button type="button" class="btn btn-info" @click="updateHandle(book._id)" >Sửa</button></td>
+                        <td>{{publisher.name}}</td>
+                        <td>{{publisher.address}}</td>
+                        <td><button type="button" class="btn btn-info" @click="updateHandle(publisher._id)" >Sửa</button></td>
                         <td><button type="button" class="btn btn-info" style="background-color: tomato;" 
-                            @click="deleteHandle(book._id)">Xóa</button></td>
+                            @click="deleteHandle(publisher._id)">Xóa</button></td>
                     </tr>
                     
             </tbody>
@@ -61,38 +53,38 @@ export default {
     },
     data() {
         return {
-            listBooks: [],
+            listPublishers: [],
          
         }
     },
     created(){
-        this.getAllBook()
+        this.getAllPublisher()
     },
     props: [
         "bookUpdateHandle"
     ],
     methods: {
-        async getAllBook(){
+        async getAllPublisher(){
             try {
-                const result = (await axios.get('http://localhost:4000/api/book/getallbooks'));
-                this.listBooks = result.data;
-                console.log(this.listBooks);
+                const result = (await axios.get('http://localhost:4000/api/publisher/getallpublishers'));
+                this.listPublishers = result.data;
+                console.log(this.listPublishers);
             } catch (error) {
-                consCole.log(err)
+                console.log(error)
             }
         },
-        async updateHandle(idBook){
-            // alert(idBook);
-            this.$router.push({name: 'updatebook', params:{id:idBook}});
+        async updateHandle(idPublisher){
+            // alert(idPublisher);
+            this.$router.push({name: 'updatepublisher', params:{id:idPublisher}});
             // this.bookUpdateHandle(data);
         },
-        async deleteHandle(bookid){
+        async deleteHandle(phulisherid){
             try {
-                const result = (await axios.delete(`http://localhost:4000/api/book/deletebook/${bookid}`));
+                const result = (await axios.delete(`http://localhost:4000/api/publisher/deletepublisher/${phulisherid}`));
                 await Swal.fire({
                     icon: "success",
-                    title: "XOÁ SÁCH",
-                    text: "Sách đã được xóa thành công!",
+                    title: "XOÁ NHÀ XUẤT BẢN",
+                    text: "Xóa thành công!",
                     });
                 window.location.reload();
             } catch (error) {
@@ -102,8 +94,8 @@ export default {
     },
     watch: {
         '$route': function(){
-            if(this.$route.name == 'book'){
-                this.getAllBook()
+            if(this.$route.name == 'publisher'){
+                this.getAllPublisher()
             }
         }
     } 

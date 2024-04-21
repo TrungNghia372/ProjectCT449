@@ -7,7 +7,7 @@
             <img src="../assets/Library.png" alt="">
         </div>
         <div class="product">
-            SÁCH
+            Sách
             <ul class="listProduct">
                 <li class="fish">
 
@@ -71,19 +71,19 @@
         <li class="cart"
         @click="gotoCart"
         >
-            GIỎ HÀNG
+            Thư Viện
 
     </li>
         <div class="news"
              @click="gotoNewsPage"
              >
-             TIN TỨC
+             Tin Tức
         </div>
-        <div class="contact"
+        <!-- <div class="contact"
             @click="gotoContact"
             >
             NỘI QUY
-        </div>
+        </div> -->
     </div>
 </template>
 <script>
@@ -134,7 +134,7 @@
         list-style: none;
         justify-content: space-evenly;
         text-align: center;
-        color:#fff;
+        color:#fcfafa;
         /* margin-bottom: 0; */
         /* margin-top:38px; */
         position: fixed;
@@ -146,7 +146,7 @@
         font-size: 20px;
         font-weight: 200 ;  
         /* widows: 100%; */
-        background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+        background-image: linear-gradient(to right, rgba(79, 218, 111, 0.37) 0%, #299e7b 100%);
         cursor: pointer;
         }
     

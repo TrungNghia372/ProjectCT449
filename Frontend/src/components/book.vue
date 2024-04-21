@@ -1,5 +1,5 @@
 <template>
-    <div class="cardMain">
+    <div class="cardMain container">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col"
                 v-for="(item, i) in listBook"
@@ -10,15 +10,16 @@
                 >
                     <img :src="item.img" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">{{item.name}}</h5>
+                        <p class="card-title">{{item.name}}</p>
                         <p class="card-text">{{item.description}}</p>
+                        <p class="card-quantity">Còn lại :{{item.quantity}}</p>
                     </div>
                     <div class="card-footer">
-                        <p class="card-price">
+                        <!-- <p class="card-price">
                             {{item.price}}
                             <span class="card-price-vnd">vnd</span>
-                        </p>
-                        <p class="card-quantity">Còn lại :{{item.quantity}}</p>
+                        </p> -->
+                        
                     </div>
                     <button class="card-btn-order"
                             >
@@ -81,17 +82,20 @@ import axios from 'axios';
         margin:0px;
     }
     .cardMain{
-        padding:0px 90px;
+        padding:0px 30px;
         margin-top:24px;
-        
+        margin-bottom: 24px;
+        border-radius: 10px;
+        background-color: rgba(79, 218, 111, 0.37);
+        padding-bottom: 30px;
     }
     .card-title{
         font-weight: bold;
         /* max-height:4em; */
-        height: 50px;
+        height: 30px;
         overflow: hidden;
         /* padding-bottom: 10px; */
-        border-bottom: 2px solid #0095a8;
+        border-bottom: 2px solid #000000;
     }
     .col{
         width:20%;
@@ -130,12 +134,12 @@ import axios from 'axios';
         margin:auto;
         margin-bottom: 4px;
         border-radius: 10px;
-        border:2px solid #0095a8;
+        border:2px solid #000000;
     }
     .card-btn-order:hover{
         box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.582);
-        background-color: #0095a8;
-        color:#fff;
+        background-color: rgba(79, 218, 111, 0.37);
+        color:#000000;
         font-weight: bold;
     }
     

@@ -2,31 +2,32 @@
     <div class="modalForm" @click.self="onCloseFormRegister">
         <div class="formRegister">
             <div class="headerForm">
-                <div class="logo">
+                <!-- <div class="logo">
                     <img src="../assets/Library.png" alt="">
-                </div>
+                </div> -->
                 
             </div>
             <div class="formMain">
                 <div class="titleForm">
-                    <h2>
-                        ĐĂNG NHẬP
-                    </h2>
-                </div>
+                    <h3>
+                        Đăng Nhập
+                    </h3>
+                </div><hr>
+                
                 <div class="contentForm">
-                    <form class="formContentLogin" @submit.prevent="login">
+                    <form class="formContentLogin mx-3" @submit.prevent="login">
                         <div class="form__field">
                             <label for="username">Tài khoản</label>
-                            <input type="text" name="username" placeholder="Nhập tài khoản..." v-model="username">
+                            <input class="form-control" type="text" name="username" placeholder="Nhập tài khoản..." v-model="username">
                         </div>
 
                         <div class="form__field">
                             <label for="psw">Mật khẩu</label>
-                            <input type="password" name="psw" placeholder="Nhập mật khẩu..." v-model="psw">
+                            <input class="form-control" type="password" name="psw" placeholder="Nhập mật khẩu..." v-model="psw">
                         </div>
 
-                        <div class="form__field " style="text-align: center;">
-                            <button class="submit_btn" type="submit">Đăng nhập</button>
+                        <div class="form__field mt-3" style="text-align: center;">
+                            <button class="btn btn-success btn-block" type="submit">Đăng nhập</button>
                         </div>
                     </form>
 
@@ -94,8 +95,8 @@ export default {
                 username: this.username,
                 psw: this.psw,
             });
-
-            if (result.data != false) {
+            console.log(result.data);
+            if (result.data) {
                 localStorage.setItem("token",result.data);
                 this.onCloseFormLogin();
                 // if ()
@@ -131,7 +132,7 @@ export default {
     align-items: center;
     justify-content: center;
     z-index: 3;
-    color: #B0E3C7;
+    color: #000000;
 }
 
 p {
@@ -141,11 +142,9 @@ p {
 
 
 .formRegister {
-    background-color: rgb(92, 180, 204);
-    height: 460px;
-    width: 350px;
+    background-color: rgb(255, 255, 255);
+    width: 400px;
     border-radius: 10px;
-
     box-shadow: 7px 7px 5px 0px rgba(255, 255, 255, 0.194);
 }
 
@@ -174,12 +173,13 @@ p {
 
 .formMain {
     padding: 10px;
-
 }
 
-.titleForm>h2 {
+.titleForm>h3 {
     font-weight: bold;
-    text-align: center;
+    /* background-color: rgba(79, 218, 111, 0.37); */
+    /* padding: 10px; */
+    /* text-align: center; */
 }
 
 .titleForm>p>a {
@@ -187,7 +187,7 @@ p {
 }
 
 .contentForm {
-    border-bottom: 1px solid #B0E3C7;
+    border-bottom: 1px solid #000000;
 }
 
 .form__field {
@@ -195,15 +195,15 @@ p {
 }
 
 .form__field>input {
-    /*     border-radius:10px;*/
+        /* border-radius:10px; */
 
-    border: 2px solid #B0E3C7;
+    border: 2px solid #000000;
     width: 100%;
     padding: 2px 20px;
 }
 
 .submit_btn {
-    border: 2px solid #B0E3C7;
+    border: 2px solid #000000;
     /* border-radius:10px;*/
 
     padding: 5px 20px;
@@ -211,16 +211,16 @@ p {
 
 .form__field>input:hover {
     box-shadow: 2px 2px 5px 0px rgba(255, 255, 255, 0.582);
-    color: darkcyan;
+    color: rgba(0, 0, 0, 0.37);
     font-weight: bold;
-    margin-left: 10px;
+    /* margin-left: 10px; */
 }
 
 .submit_btn:hover {
     box-shadow: 2px 2px 5px 0px rgba(255, 255, 255, 0.582);
-    color: darkcyan;
+    color: rgba(79, 218, 111, 0.37);
     font-weight: bold;
-    margin-left: 10px;
+    /* margin-left: 10px; */
 }
 
 .iconForm {
@@ -230,7 +230,7 @@ p {
 }
 
 .Login {
-    color: crimson;
+    color: rgb(24, 102, 47);
     cursor: pointer;
 }
 

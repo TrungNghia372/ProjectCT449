@@ -9,17 +9,17 @@
           <div class="userInfo">
             <div class="groupUserInfo">
               <h5 class="titleUser">Mã số sinh viên</h5>
-              <h5>B2205464</h5>
+              <h5>B2005725</h5>
             </div>
   
             <div class="groupUserInfo">
               <h5 class="titleUser">Họ tên</h5>
-              <h5>Huỳnh Văn Quí</h5>
+              <h5>Quách Trung Nghĩa</h5>
             </div>
   
             <div class="groupUserInfo">
               <h5 class="titleUser">Email</h5>
-              <h5>quib2205464@student.ctu.edu.vn</h5>
+              <h5>nghiab2005725@student.ctu.edu.vn</h5>
             </div>
   
             <div class="groupUserInfo">
@@ -29,12 +29,12 @@
   
             <div class="groupUserInfo">
               <h5 class="titleUser">Số điện thoại</h5>
-              <h5>0522543917</h5>
+              <h5>0326117003</h5>
             </div>
   
             <div class="groupUserInfo">
               <h5 class="titleUser">Ngành - Khóa</h5>
-              <h5>Ngôn ngữ Anh K48</h5>
+              <h5>Công nghệ thông tin - K46</h5>
             </div>
        
 

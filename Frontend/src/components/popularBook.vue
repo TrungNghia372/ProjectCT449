@@ -17,7 +17,7 @@
                     <div class="card-footer">
                         <p class="card-price">
                             {{item.price}}
-                            <span class="card-price-vnd">vnd</span>
+                            <!-- <span class="card-price-vnd">vnd</span> -->
                         </p>
                         <p class="card-quantity">Còn lại :{{item.quantity}}</p>
                     </div>

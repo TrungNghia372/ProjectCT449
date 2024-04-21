@@ -9,8 +9,7 @@
             </div>
 
             <div class="titleOrder">
-                <h1><i class="fa-solid fa-cart-shopping"></i> GIỎ HÀNG</h1>
-                <h4>Sản phẩm hiện có: <small> 0{{ countItemInCart() }}</small></h4>
+                <h1><hr>Thư Viện<hr></h1>
             </div>
 
             <div class="listCard">
@@ -25,19 +24,19 @@
                             Tên sách: {{ item.name }}
                         </h4>
 
-                        <h5 class="costCard colorBlack">
+                        <!-- <h5 class="costCard colorBlack">
                             Giá: {{ item.price }} <small>đồng</small>
-                        </h5>
+                        </h5> -->
                     </div>
                     <div class="quantityBuyCard">
-                        <h5 class="colorRed">Số lượng: 0{{ item.quantity }}</h5>
+                        <h5 class="">Số lượng: 0{{ item.quantity }}</h5>
                     </div>
 
-                    <div class="priceCard">
+                    <!-- <div class="priceCard">
                         <h5 class="sumPrice colorRed">
                             Thành tiền: {{ item.price * item.quantity }} <small>đồng</small>
                         </h5>
-                    </div>
+                    </div> -->
                     <div class="deleteCard">
                         <p class="delete" @click="deleteItem(item._id)">
                             <i class="fa-regular fa-trash-can"></i>
@@ -45,22 +44,35 @@
                     </div>
                 </div>
                 <div class="payOrder">
-                    <h3>THÔNG TIN THANH TOÁN</h3>
                     <hr>
-                    <h4>
-                        Thành tiền:
-                        <span class="colorRed">{{ sumTotalProduct() }} <small>đồng</small></span>
-                    </h4>
+                    <h3>Thông Tin Mượn Sách</h3>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3"></div>
+                        <h4 class="col-3">Ngày mượn: </h4>
+                        <p class="col-3">{{  getCurrentDate(borrowedDate) }}</p>
+                        <div class="col-3"></div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-3"></div>
+                        <h4 class="col-3">Ngày trả: </h4>
+                        <input class="col-3" type="date" v-model="payDate">
+                        <div class="col-3"></div>
+                    </div>
+                    
+                    
                     <!-- <small style="color:#C92127">* Phí vận chuyển sẽ được tính ở trang thanh toán</small>
                     <br>
                     <small style="color:#C92127">* Bạn cũng có thể nhập mã giảm giá ở trang thanh toán</small>
                     <hr> -->
-                    <h3>
+                    <!-- <h3>
                         Tổng Số tiền (gồm VAT):
                         <span class="colorRed">{{ sumTotalProduct() }} <small>đồng</small></span>
-                    </h3>
+                    </h3> -->
+                    <hr>
                     <button class="btn-pay" @click="handlePay">
-                        THANH TOÁN
+                        Mượn Sách
                     </button>
 
                 </div>
@@ -75,25 +87,17 @@
         <div class="successfullyPay" v-if="isshowsuccessfullyPay">
             <div class="titlesuccessfullPay">
                 
-                <h5 class="colorgreen">Hóa đơn đã được thanh toán</h5> 
-                <img src="https://hieumobile.com/wp-content/uploads/tich-xanh.png" width="100px" alt="">
-                <i class="fa-sharp fa-light fa-square-check" style="color: #ffffff;"></i>
+                <h5 class="colorgreen">Mượn sách thành công</h5> 
+                <!-- <img src="https://hieumobile.com/wp-content/uploads/tich-xanh.png" width="100px" alt=""> -->
                 <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Flennguyenmedia.com%2Fhuong-dan-dang-ky-tich-xanh-facebook-mien-phi%2F&psig=AOvVaw1gu58ls1plkNY2UqYcBFTc&ust=1700623490515000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKjHiKuS1IIDFQAAAAAdAAAAABAI" alt="">
                 <!-- <p class="colorGrey">Hóa đơn của bạn đã được xử lý!</p>
                 <p class="colorGrey" style="border-bottom:1px solid #aeaeb0; padding-bottom:10px">Vui lòng xem chi tiết bên
                     dưới</p> -->
             </div>
             <!-- <p style="padding:10px 0px 15px 0px">Mã số giao dịch :<span class="colorBlue">{{this.$store.state.idCart}}</span></p>  -->
-            <div class="bodysuccessfullPay ">
-                <!-- <h5>Tổng số lượng sản phẩm <span class="colorRed"
-                        style="text-align: end;">{{ this.$store.state.countItemInCart }}</span></h5> -->
-                <h5>Tổng số tiền hóa đơn <span class="colorRed" style="text-align: end;">{{ sumTotalProduct() }}
-                        <small>đồng</small></span></h5>
-                <!-- <h5>Thanh toán bởi <span class="colorRed" style="text-align:end">{{ this.$store.state.user.username }}</span>
-                </h5> -->
-            </div>
+            
             <button class="confirmPay" @click="onCloseConFirmPay">
-                Đã thanh toán    
+                Xác nhận   
             </button>
         </div>
     </div>
@@ -120,6 +124,8 @@ export default {
             isshowEmptyItem: true,
             count: 0,
             isshowsuccessfullyPay: false,
+            borrowedDate: new Date(),
+            payDate: new Date(),
         }
     },
     created() {
@@ -131,6 +137,7 @@ export default {
             !isNaN(this.count) && this.count > 0 ? this.count : this.count = 0;
         },
         async getOrders() {
+            // console.log(this.listOrders)
             try {
                 const result = await axios.get('http://localhost:4000/api/cart/get/product', {
                     params: {
@@ -139,7 +146,7 @@ export default {
                 });
                 // console.log(result.data);
                 this.listOrders = result.data;
-                // console.log(this.listOrders);
+                // console.log(this.listOrders.map(product=>product._id));
             } catch (error) {
                 console.log(error);
             }
@@ -151,6 +158,13 @@ export default {
             })
             // console.log(sum);
             return sum;
+        },
+        getCurrentDate(d) {
+            let day = d.getDate();
+            let month =  d.getMonth() + 1;
+            let year = d.getFullYear();
+
+            return `${month}/${day}/${year}`;
         },
 
 
@@ -182,11 +196,15 @@ export default {
         async handlePay() {
             try {
                 if (this.$store.state.countItemInCart == 0) {
-                    alert("Chọn sản phẩm để thanh toán");
+                    alert("Vui lòng chọn sách để mượn");
                 } else {
                     const result = await axios.delete('http://localhost:4000/api/cart/pay/product', {
                         params: {
                             idCart: this.$store.state.idCart,
+                            emailUser: this.$store.state.user.email,
+                            idProducts: this.listOrders.map(product=>product._id),
+                            borrowedDate: this.borrowedDate,
+                            payDate: this.payDate,
                         }
                     });
                     this.isshowsuccessfullyPay = true;
@@ -238,7 +256,7 @@ p {
     /* align-items: center; */
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-image: url('https://img.freepik.com/free-vector/abstract-smooth-liquid-banner-presentation-backdrop_1017-42992.jpg?w=1380&t=st=1683732500~exp=1683733100~hmac=177932f17dbb2bcbee22339f3e7d91ae76ba5ac8e893ccd067b84b3114f09260');
+    /* background-image: url('https://img.freepik.com/free-vector/abstract-smooth-liquid-banner-presentation-backdrop_1017-42992.jpg?w=1380&t=st=1683732500~exp=1683733100~hmac=177932f17dbb2bcbee22339f3e7d91ae76ba5ac8e893ccd067b84b3114f09260'); */
     color: rgb(0, 0, 0);
     padding-bottom: 40px;
     min-height: 500px;
@@ -318,17 +336,18 @@ p {
 
 .payOrder>h4,
 .payOrder>h3 {
-    padding-bottom: 10px;
-    border-bottom: 1px solid #fff;
+    /* padding-bottom: 10px; */
+    /* border-bottom: 1px solid #fff; */
 }
 
 .btn-pay {
-    background-color: #00d5ff;
+    background-color: rgba(79, 218, 111, 0.548);
     color: #0a0000;
     border: 2px solid #fff;
     border-radius: 10px;
-    width: 100%;
+    width: 25%;
     padding: 15px 0;
+    margin-top: 20px;
     /* font-weight: bold; */
 }
 
@@ -393,7 +412,7 @@ p {
 }
 
 .successfullyPay {
-    background-color: #fff;
+    background-color: #ffffff;
     color: black;
     position: absolute;
     top: 150px;
@@ -401,6 +420,7 @@ p {
     padding: 20px;
     text-align: center;
     border-radius: 10px;
+    border: 1px solid black;
 }
 
 .bodysuccessfullPay {
@@ -409,15 +429,15 @@ p {
 
 .confirmPay {
     padding: 10px;
-    background-color: #33ced9;
+    /* background-color: #33ced9; */
     border: 1px solid;
     border-radius: 10px;
 }
 
 .confirmPay:hover {
     font-weight: bold;
-    background-color: #33ced9;
-    color: #fff;
+    background-color: rgba(79, 218, 111, 0.37);
+    color: #000000;
 }
 
 .footer_product {
@@ -432,7 +452,7 @@ p {
 }
 
 h4 {
-    color: rgb(40, 177, 240, 1);
+    color: rgb(24, 161, 47);
 }
 h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;

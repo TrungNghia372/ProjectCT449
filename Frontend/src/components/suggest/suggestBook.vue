@@ -1,5 +1,5 @@
 <template>
-    <div class="cardMain">
+    <div class="cardMain container">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col"
                 v-for="(item, i) in listSuggetBook"
@@ -12,13 +12,14 @@
                     <div class="card-body">
                         <h5 class="card-title">{{item.name}}</h5>
                         <p class="card-text">{{item.description}}</p>
+                        <p class="card-quantity">Còn lại: {{item.quantity}}</p>
+
                     </div>
                     <div class="card-footer">
                         <p class="card-price">
                             {{item.price}}
-                            <span class="card-price-vnd">vnd</span>
+                            <!-- <span class="card-price-vnd">vnd</span> -->
                         </p>
-                        <p class="card-quantity">Còn lại :{{item.quantity}}</p>
                     </div>
                     <button class="card-btn-order">Xem chi tiết</button>
 
@@ -74,7 +75,7 @@ import axios from 'axios';
         height: 50px;
         overflow: hidden;
 
-        border-bottom: 2px solid #0095a8;
+        border-bottom: 2px solid #000000;
     }
     .col{
         width:33.333%;
@@ -82,6 +83,7 @@ import axios from 'axios';
         color:black;
     }
     .card-img-top{
+        margin-top: 10px;
         height:160px;
         width:100%;
     }
@@ -114,12 +116,12 @@ import axios from 'axios';
         margin:auto;
         margin-bottom: 4px;
         border-radius: 10px;
-        border:2px solid #0095a8;
+        border:2px solid #000000;
     }
     .card-btn-order:hover{
         box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.582);
-        background-color: #0095a8;
-        color:#fff;
+        background-color: rgba(79, 218, 111, 0.37);
+        color:#000000;
         font-weight: bold;
     }
     

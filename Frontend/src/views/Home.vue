@@ -2,9 +2,9 @@
     <Header />
     <div class="main">
         <Nav />
-        <div class="carouselMain">
+        <div class="carouselMain mt-5">
 
-            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide me-4" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
@@ -18,7 +18,7 @@
                         <img src="https://img.freepik.com/free-vector/gradient-world-book-day-horizontal-banner_23-2149300589.jpg?w=1380&t=st=1699761982~exp=1699762582~hmac=7b8b05c9acef68ecaff46831d191515961d727295556e40e367db00f8d0f9ade"
                             class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h4>Future Book Library</h4>
+                            <h4>Book_TN372</h4>
                             <p>Sách là ngọn đèn soi đường cho con người</p>
                         </div>
                     </div>
@@ -27,7 +27,7 @@
                         <img src="https://img.freepik.com/free-vector/gradient-world-book-day-background_23-2149320534.jpg?w=996&t=st=1699762099~exp=1699762699~hmac=733ee152c2b6a8c7710f98cc18f19561d667d502de862bc754d0b558f55d2e62"
                             class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h4>Future Book Library</h4>
+                            <h4>Book_TN372</h4>
                             <p>Sách mở ra trước mắt ta những chân trời mới</p>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                         <img src="https://img.freepik.com/free-vector/flat-world-book-day-background_23-2149335514.jpg?w=996&t=st=1699762323~exp=1699762923~hmac=02434cca6dfccaf375c65965fa0d752c459597391ae492af414958dd3ee77d71"
                             class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h4>Future Book Library</h4>
+                            <h4>Book_TN372</h4>
                             <p>Sách là người bạn tốt của tuổi trẻ</p>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-            <div class="ViewProduct">
+            <!-- <div class="ViewProduct">
                 <div>
                     <img class="imgView" src="https://cdn0.fahasa.com/media/catalog/product/b/1/b1-1_1_5.jpg" alt="">
                     <img class="imgView" src="https://cdn0.fahasa.com/media/catalog/product/i/m/image_180905.jpg" alt="">
@@ -72,32 +72,32 @@
                     <img class="imgView" src="https://cdn0.fahasa.com/media/catalog/product/i/m/image_187162.jpg" alt="">
                     <img class="imgView" src="https://cdn0.fahasa.com/media/catalog/product/8/9/8935244888416.jpg" alt="">
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <div class="product">
             <div class="titleProduct">
-                <p> <b>BOOKS FROM THE FUTURE BOOK LIBRARY</b> </p>
+                <p class="my-5"> <hr><b>Thư Viện Sách</b> <hr></p>
             </div>
             <!-- PRODUCT -->
             <div class="cardMainProduct">
-                <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="row row-cols-1 row-cols-md-3 g-4 bg-color">
                     <div class="col" v-for="(item, i) in listProduct" :key="i">
                         <div class="card h-100" @click="showDetailBook(item._id)">
                             <img :src="item.img" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">{{ item.name }}</h5>
-                                <p class="card-text"> Tác giả: {{ item.author }} </p>
-                                <p class="card-text"> Thể loại: {{ item.type }}</p> 
-                                <p class="card-text"> Năm sản xuất: {{ item.manufactureOfYear }}</p>
-
+                                <p class="card-text"><b>Tác giả:</b>  {{ item.author }} </p>
+                                <p class="card-text"><b>Thể loại:</b>  {{ item.type }}</p> 
+                                <p class="card-text"><b>Năm sản xuất:</b>  {{ item.manufactureOfYear }}</p>
+                                <p class="card-quantity"><b>Còn lại:</b> {{item.quantity}}</p>
                             </div>
                             <div class="card-footer">
                                 <p class="card-price">
-                                    {{item.price}}
-                                    <span class="card-price-vnd">vnd</span>
+                                    <!-- {{item.price}} -->
+                                    <!-- <span class="card-price-vnd">vnd</span> -->
                                 </p>
-                                <p class="card-quantity">Còn lại :{{item.quantity}}</p>
+                                
                             </div>
                             <button class="card-btn-order"  >Xem chi tiết</button>
                         </div>
@@ -113,13 +113,13 @@
     </div>
     <div class="titleNews">
     </div>
-    <div class="imgSale">
+    <!-- <div class="imgSale container">
 
         <img src="https://cdn0.fahasa.com/media/catalog/product/8/9/8935235239326.jpg" class="d-block w-100" alt="...">
         <img src="https://cdn0.fahasa.com/media/catalog/product/t/h/th_-tr_i-phi_n-mu_n-_tb9_---b_a-1.jpg"
             class="d-block w-100" alt="...">
         <img src="https://cdn0.fahasa.com/media/catalog/product/9/7/9781108825948.jpg" class="d-block w-100" alt="...">
-    </div>
+    </div> -->
 
 
 
@@ -287,12 +287,12 @@ export default {
 
 .product {
     margin-top: 40px;
-    text-align: center;
+    /* text-align: center; */
     /* border-top:1px solid #0b486b; */
 }
 
 .titleProduct {
-    color: rgb(40, 177, 240, 1);
+    color: rgb(0, 0, 0);
     font-size: 30px;
     text-align: start;
     /* padding: 10px 0 0 0px; */
@@ -329,11 +329,12 @@ p {
 
 .card-title {
     font-weight: bold;
+    text-align: center;
     /* max-height:4em; */
     height: 50px;
     overflow: hidden;
     /* padding-bottom: 10px; */
-    border-bottom: 2px solid #0095a8;
+    border-bottom: 2px solid #000000;
 }
 
 .col {
@@ -342,6 +343,7 @@ p {
 }
 
 .card-img-top {
+    margin-top: 10px;
     height: 160px;
     width: 100%;
 }
@@ -360,7 +362,11 @@ p {
     justify-content: space-between;
 
 }
-
+.bg-color{
+    background-color: rgba(79, 218, 111, 0.37);
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
 .card-price {
     background-color: #fff;
     color: orangered;
@@ -376,15 +382,15 @@ p {
 .card-btn-order {
     width: 60%;
     margin: auto;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
     border-radius: 10px;
-    border: 2px solid #0095a8;
+    border: 2px solid #000000;
 }
 
 .card-btn-order:hover {
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.582);
-    background-color: #0095a8;
-    color: #fff;
+    background-color: rgba(79, 218, 111, 0.37);
+    /* color: #000000; */
     font-weight: bold;
 }
 

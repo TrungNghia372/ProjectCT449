@@ -40,8 +40,8 @@
 
         <div class="buttonbook">
           <button type="button" class="btn btn-info" style="background-color:coral;"
-            @click="this.$router.push({ name: 'detailbook' });">Thoát</button>
-          <button type="button" class="btn btn-info" @click="addBook()">Cập nhật</button>
+            @click="this.$router.push({ name: 'detailbookadmin' });">Thoát</button>
+          <button type="button" class="btn btn-info" @click="updateBook()">Cập nhật</button>
 
         </div>
 
@@ -63,48 +63,77 @@ export default {
     Heading,
     Footer,
   },
-  // data() {
-  //   return {
-  //     name: "",
-  //     author: "",
-  //     type: "",
-  //     manufactureOfYear: "",
-  //     quantity: 0,
-  //     description: "",
-  //     img: "",
-  //   }
-  // },
-  // methods: {
-  //   async addBook() {
-  //     try {
-  //       const result = await axios.post('http://localhost:4000/api/book/addbook', {
-  //         name: this.name,
-  //         author: this.author,
-  //         type: this.type,
-  //         manufactureOfYear: this.manufactureOfYear,
-  //         quantity: this.quantity,
-  //         description: this.description,
-  //         img: this.img,
-  //       });
-  //       await Swal.fire({
-  //         icon: "success",
-  //         title: "THÊM SÁCH",
-  //         text: "Sách đã được thêm thành công!",
-  //       });
+  data() {
+    return {
+      bookItem: "",
+      name: "",
+      author: "" ,
+      type: "" ,
+      manufactureOfYear: "" ,
+      quantity: 0 ,
+      description: "" ,
+      img: "" ,
+    }
+  },
 
-  //       // console.log("Data:---",this.name,this.author,this.type,this.manufactureOfYear,this.quantity,this.description, this.img);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   }
-  // }
+  created(){
+    this.getABook()
+  },
+  watch: {
+    // name : this.bookItem.name,
+    
+  },
+ 
+  methods: {
+    async updateBook() {
+      try {
+        const result = await axios.put(`http://localhost:4000/api/book/${this.bookItem._id}`, {
+          name: this.name,
+          author: this.author,
+          popularType: this.popularType,
+          type: this.type,
+          manufactureOfYear: this.manufactureOfYear,
+          quantity: this.quantity,
+          price: this.price,
+          description: this.description,
+          img: this.img,
+        });
+        await Swal.fire({
+          icon: "success",
+          title: "CẬP NHẬT SÁCH",
+          text: "Sách đã được cập nhật thành công!",
+        });
+
+      } catch (error) {
+        console.log(error);
+      }
+    },
+
+    async getABook() {
+      try {
+        const result = await axios.get(`http://localhost:4000/api/book/${this.$route.params.id}`)
+        this.bookItem = result.data;
+        this.name = result.data.name;
+        this.author = result.data.author;
+        this.type = result.data.type;
+        this.manufactureOfYear = result.data.manufactureOfYear;
+        this.quantity = result.data.quantity;
+        this.description = result.data.description;
+        this.img = result.data.img;
+        
+        return result;
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  }
 }
 </script>
 
 <style scoped>
 .titlee {
-  margin-top: 55px;
-  text-shadow: 0 2px 2px #ffffff, 0 4px 4px #fff, 0 6px 6px #56b4df;
+  margin-top: 100px;
+  text-shadow: 0 2px 2px #ffffff, 0 4px 4px #fff, 0 6px 6px rgba(79, 218, 111, 0.37);;
   padding-top: 25px;
   padding-bottom: 15px;
 }
@@ -151,8 +180,8 @@ textarea {
 
 button {
   margin-top: 20px;
-  background-color: #3a80f1;
-  color: #fff;
+  background-color: rgba(79, 218, 111, 0.603);
+  color: #000000;
   padding: 10px;
   border: none;
   cursor: pointer;

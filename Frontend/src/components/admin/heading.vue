@@ -4,7 +4,7 @@
             <div class="logo" data-v-b2f07944="" @click="this.$router.push({ name: 'admin'});">  <img src="/src/assets/sachh.png" alt="" data-v-b2f07944="">
             
 
-        <h2 class="titleNav" @click="this.$router.push({ name: 'admin'});">Future Book Library</h2>
+        <h2 class="titleNav" @click="this.$router.push({ name: 'admin'});">Book_TN372</h2>
         </div>
         <div class="infoLeft">
 
@@ -13,10 +13,10 @@
                         data-v-7131493d="">
                     <!-- <div class="dotState" data-v-7131493d="">Library Future</div> -->
                 </div>
-                <div class="infoUsers" data-v-7131493d="" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">TrungHieu</div>
+                <div class="infoUsers" data-v-7131493d="" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"> TrungNghia</div>
             </li>
             <li class="logout" data-v-7131493d="" @click="onlogout">
-              <div class="imgout"><p data-v-7131493d="" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"><img src="https://cdn-icons-png.flaticon.com/128/10152/10152161.png" alt="" width="30px" > Thoát</p></div>  
+              <div class="imgout"><p data-v-7131493d="" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"><img src="https://cdn-icons-png.flaticon.com/128/10152/10152161.png" alt="" width="30px" >Thoát</p></div>  
             </li>
         </div>
     </div>
@@ -38,7 +38,7 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 .navbarr {
-    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    background-image: linear-gradient(to right, rgba(79, 218, 111, 0.37) 0%, #299e7b 100%);
 }
 .titleNav{
     font-family: 'Homemade Apple', cursive;
@@ -52,25 +52,25 @@ export default {
     margin-top: -39px;
     display: flex;
     justify-content: space-around;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 .infoUser{
     background: white;
-    border: solid 2px rgb(47, 83, 224);
+    border: solid 2px rgb(0, 0, 0);
     border-radius: 12px;
     color: #000;
     height: 70%;
     margin-top: 10px;
-    margin-right: 2px;
+    margin-right: 10px;
 }
 
 .infoUser:hover{
-    background: #68dfe5;
+    background: rgba(79, 218, 111, 0.37);
 }
 
 .logout{
     background: white;
-    border: solid 2px rgb(47, 83, 224);
+    border: solid 2px rgb(0, 0, 0);
     border-radius: 12px;
     color: #000;
     height: 70%;
@@ -78,7 +78,7 @@ export default {
 }
 
 .logout:hover{
-    background: #68dfe5;
+    background: rgba(79, 218, 111, 0.37);
 }
 
 .infoLeft{

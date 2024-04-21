@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <Heading />
-    <div class="inner">
+    <div class="inner container">
       <div class="left">
         <div class="title">
           <h3>THÔNG TIN CÁ NHÂN</h3>
@@ -9,32 +9,32 @@
         <div class="userInfo">
           <div class="groupUserInfo">
             <h5 class="titleUser">Mã số</h5>
-            <h5>B2005672</h5>
+            <h5>B2005725</h5>
           </div>
 
           <div class="groupUserInfo">
             <h5 class="titleUser">Họ tên</h5>
-            <h5>Nguyễn Trung Hiếu</h5>
+            <h5>Quách Trung Nghĩa</h5>
           </div>
 
           <div class="groupUserInfo">
             <h5 class="titleUser">Email</h5>
-            <h5>hieub2005672@student.ctu.edu.vn</h5>
+            <h5>nghiab2005725@student.ctu.edu.vn</h5>
           </div>
 
           <div class="groupUserInfo">
             <h5 class="titleUser">Địa chỉ</h5>
-            <h5>Vĩnh Long</h5>
+            <h5>An Giang</h5>
           </div>
 
 
           <div class="groupUserInfo">
             <h5 class="titleUser">Số điện thoại</h5>
-            <h5>0353514931</h5>
+            <h5>0326117003</h5>
           </div>
           <div class="groupUserInfo">
             <h5 class="titleUser">Đơn vị công tác</h5>
-            <h5>Future Book Library</h5>
+            <h5>Book_TN372</h5>
           </div>
 
         </div>
@@ -57,14 +57,6 @@
             </div>
             <h5>Thêm sách</h5>
           </div>
-          <div class="formGroup" @click="goToRule">
-            <div class="imgfeature">
-              <img
-                src="https://png.pngtree.com/png-clipart/20230811/original/pngtree-halftone-circle-dots-vector-square-logo-shape-vector-picture-image_10378990.png"
-                alt="">
-            </div>
-            <h5>Quy định, chính sách</h5>
-          </div>
           <div class="formGroup" @click="goToDetailAdmin">
 
             <div class="imgfeature">
@@ -74,27 +66,27 @@
           </div>
         </div>
         <div class="right2">
-          <div class="formGroup" @click="goToDetailtypeBook">
+          <div class="formGroup" @click="goToDetailPublisher">
             <div class="imgfeature">
               <img src="../assets/logoschedule.png" alt="">
             </div>
-            <h5>Xem thông tin loại sách</h5>
+            <h5>Xem nhà xuất bản</h5>
           </div>
-          <div class="formGroup" @click="goToTypeBook">
+          <div class="formGroup" @click="goToAddPublisher">
             <div class="imgfeature">
               <img src="../assets/type.png" alt="">
             </div>
-            <h5>Thêm loại sách</h5>
+            <h5>Thêm nhà xuất bản</h5>
           </div>
 
 
 
-          <div class="formGroup">
+          <!-- <div class="formGroup">
             <div class="imgfeature">
               <img src="../assets/logobieudo.png" alt="">
             </div>
             <h5>Sơ đồ thống kê mượn sách</h5>
-          </div>
+          </div> -->
           <div class="formGroup" @click="goToNews">
             <div class="imgfeature">
               <img src="../assets/logonews.png" alt="">
@@ -125,11 +117,15 @@ export default {
   methods: {
     goToAddBook() {
       this.$router.push({ name: 'addbook' });
-
+    },
+    goToAddPublisher() {
+      this.$router.push({ name: 'addpublisher' });
     },
     goToDetailBookAdmin() {
       this.$router.push({ name: 'detailbookadmin' });
-
+    },
+    goToDetailPublisher() {
+      this.$router.push({ name: 'detailpublisher' });
     },
     goToDetailAdmin() {
       this.$router.push({ name: 'detailadmin' });
@@ -149,9 +145,9 @@ export default {
 .inner {
   padding: 25px 20px;
   border-radius: 5px;
-  width: 1000px;
+  /* width: 1200px; */
   height: 500px;
-  background-color: azure;
+  background-color: rgb(255, 255, 255);
   display: flex;
   margin: 0 auto;
   justify-content: center;
@@ -186,7 +182,7 @@ export default {
 }
 
 .title {
-  text-shadow: 0 2px 2px #ffffff, 0 4px 4px #fff, 0 6px 6px #56b4df;
+  text-shadow: 0 2px 2px #ffffff, 0 4px 4px #fff, 0 6px 6px rgb(79, 218, 111);
   text-align: center;
 }
 
@@ -228,11 +224,12 @@ export default {
 }
 
 .formGroup {
-  width: 160px;
+  /* width: 160px; */
   height: 100px;
   padding: 1rem;
   cursor: pointer;
   text-align: center;
+  margin-bottom: 45px;
 }
 
 .imgfeature {

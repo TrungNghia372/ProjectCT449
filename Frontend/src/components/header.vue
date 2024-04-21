@@ -222,10 +222,10 @@ p {
 }
 
 .header {
-    color: #fff;
+    color: #ffffff;
     /* height: 38px; */
     width: 100%;
-    background: black;
+    background: rgb(0, 0, 0);
     display: flex;
     align-items: center;
     list-style: none;

@@ -1,7 +1,7 @@
 <template>
     <div class="v-pagination_container">
         <div class="v-pagination-left">
-            <span>Total: {{totalRecord}} sản phẩm</span>
+            <!-- <span>Total: {{totalRecord}} sản phẩm</span> -->
         </div>
         <div class="v-pagination-right">
             <div class="v-pagination_right-record"></div>

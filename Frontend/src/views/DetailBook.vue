@@ -1,8 +1,8 @@
 <template>
     <Header />
     <Nav />
-    <div class="main">
-        <div class="product">
+    <div class="main container">
+        <div class="product ">
             <div class="detailProduct">
                 <div class="imgProduct">
                     <img :src="book.img" alt="">
@@ -18,19 +18,19 @@
                         {{ book.type }}
                     </h6>
 
-                    <div class="priceAndquatity">
+                    <!-- <div class="priceAndquatity">
                         <h4 class="priceProduct" style="color:red">
                             Giá: {{ book.price }}
                             <small>đồng</small>
                         </h4>
-                    </div>
+                    </div> -->
                     <!-- <div class="quantityProduct">
                         <p>
                             Số lượng:
                             {{book.quantity}}
                         </p>
                     </div> -->
-                    <div class="buytoCart">
+                    <div class="buytoCart ">
                         Số lượng:
                         <div class="quantityBuyCard">
                             <a class="btn-subtract" @click="changeCounter('-1')">
@@ -52,19 +52,19 @@
                     </div>
 
                     <div class="cart">
-                        <button class="btn-Cart" @click="addToCart">
+                        <!-- <button class="btn-Cart" @click="addToCart">
                             <i class="fa-solid fa-cart-shopping"></i>
                             Thêm Vào Giỏ Hàng
-                        </button>
+                        </button> -->
                         <button class="btn-Cart" @click="addToCart">
-                            Mua ngay
+                            Mượn sách
                         </button>
                     </div>
                 </div>
             </div>
 
-            <h1 class="titleSuggest">
-                Các thể loại sách liên quan
+            <h1 class="titleSuggest"><hr>
+                Các loại sách khác <hr>
             </h1>
             <Suggest />
         </div>
@@ -134,7 +134,7 @@ export default {
                     });
 
                     if (result.data == true) {
-                        alert('Sản phẩm đã được thêm vào giỏ hàng');
+                        alert('Sách đã được thêm vào thư viện');
                         location.reload();
                     }
 
@@ -153,7 +153,7 @@ export default {
     display: flex;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-image: url('https://img.freepik.com/free-vector/abstract-smooth-liquid-banner-presentation-backdrop_1017-42992.jpg?w=1380&t=st=1683732500~exp=1683733100~hmac=177932f17dbb2bcbee22339f3e7d91ae76ba5ac8e893ccd067b84b3114f09260');
+    /* background-image: url('https://img.freepik.com/free-vector/abstract-smooth-liquid-banner-presentation-backdrop_1017-42992.jpg?w=1380&t=st=1683732500~exp=1683733100~hmac=177932f17dbb2bcbee22339f3e7d91ae76ba5ac8e893ccd067b84b3114f09260'); */
 
 }
 
@@ -177,6 +177,9 @@ export default {
 }
 
 .detailProduct {
+    padding-bottom: 70px;
+    border: 1px solid #000000;
+    border-radius: 10px;
     display: flex;
 }
 
@@ -230,10 +233,10 @@ export default {
 }
 
 .titleSuggest {
-    text-align: start;
+    text-align: center;
     border-bottom: 1px solid #fff;
     padding: 0px 0px 10px 0px;
-    margin-top: 46px;
+    margin-top: 100px;
 }
 
 .quantityBuyCard {
@@ -261,18 +264,18 @@ export default {
 }
 
 .btn-Cart {
-    width: 60%;
+    width: 30%;
     /* margin:auto; */
     padding: 10px 0px;
     margin-top: 20px;
     border-radius: 10px;
-    border: 2px solid #0095a8;
+    border: 2px solid #000000;
 }
 
 .btn-Cart:hover {
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.582);
-    background-color: #0095a8;
-    color: #fff;
+    background-color: rgba(79, 218, 111, 0.37);
+    color: #000000;
     font-weight: bold;
 }
 .cart{

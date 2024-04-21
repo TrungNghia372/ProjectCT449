@@ -10,6 +10,7 @@ const cookieParser = require('cookie-parser');
 
 //router
 const bookRoute = require('./routes/Book');
+const publisherRoute = require('./routes/Publisher');
 const productRoute = require('./routes/Product');
 const authRoute = require('./routes/Auth');
 const userRoute = require('./routes/User');
@@ -19,8 +20,7 @@ const cartsRoute = require('./routes/Carts');
 
 dotenv.config();
 
-
-mongoose.connect("mongodb+srv://trunghieu:w5NEz8qg@cluster0.juwgljj.mongodb.net/").then(()=>{
+mongoose.connect("mongodb+srv://trungnghia:123456789Nghia@cluster0.t0pntpe.mongodb.net/").then(()=>{
     console.log('connect successed DB');
 }).catch(()=>{console.log('error connect DB')})
 
@@ -41,7 +41,7 @@ app.use(morgan('common'));
 app.use(cookieParser());
 //Routes
 app.use("/api/book",bookRoute);                     //------------------------------------------da lam
-
+app.use("/api/publisher",publisherRoute);                     //------------------------------------------da lam
 app.use("/api/product",productRoute);
 app.use("/api/auth",authRoute);
 app.use("/api/user",userRoute);

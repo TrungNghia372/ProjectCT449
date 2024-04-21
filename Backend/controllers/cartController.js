@@ -1,6 +1,8 @@
 const Cart = require('../models/cart');
 const Order = require('../models/order');
 const Book = require('../models/book');
+const Follow = require('../models/follow');
+const User = require('../models/user');
 const mongoose = require('mongoose')
 
 const cartController = {
@@ -85,7 +87,17 @@ const cartController = {
 
     // pay
     pay: async(req,res) => {
+        console.log(req.query);
         try {
+            const userExit = await User.find({email : req.query.emailUser});
+            console.log(userExit);
+            const resultFollow = await Follow.create({
+                idUser: userExit[0]._id,
+                idProducts: req.query.idProducts,
+                borrowedDate: req.query.borrowedDate,
+                payDate: req.query.payDate,
+
+            });
             // console.log('ooookkkkk');
             // console.log(mongoose.Types.ObjectId(req.query.idCart))
             // await Order.findByIdAndDelete(mongoose.Types.ObjectId(req.query.idCart));
