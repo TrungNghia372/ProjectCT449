@@ -75,9 +75,9 @@
 
     </li>
         <div class="news"
-             @click="gotoNewsPage"
+             @click="gotoFollowBook"
              >
-             Tin Tức
+             Sách Đã Mượn
         </div>
         <!-- <div class="contact"
             @click="gotoContact"
@@ -94,8 +94,8 @@
             this.$router.push({ name: 'home'});
         },
         
-        gotoNewsPage(){
-            this.$router.push({ name: 'news'});
+        gotoFollowBook(){
+            this.$router.push({ name: 'followBook'});
         },
         gotoContact(){
             this.$router.push({ name: 'contact'});

@@ -46,14 +46,14 @@
 
           <div class="formGroup" @click="goToDetailBookAdmin">
             <div class="imgfeature">
-              <img src="../assets/logobook2.png" alt="">
+              <img style="width: 60px; height: 50px; margin-top: 20px;" src="../assets/book.jpg" alt="">
             </div>
             <h5>Xem thông tin sách</h5>
           </div>
           <div class="formGroup" @click="goToAddBook">
 
             <div class="imgfeature">
-              <img src="../assets/logoadd.png" alt="">
+              <img style="width: 60px; height: 50px; margin-top: 20px;" src="../assets/addBook.png" alt="">
             </div>
             <h5>Thêm sách</h5>
           </div>
@@ -68,13 +68,13 @@
         <div class="right2">
           <div class="formGroup" @click="goToDetailPublisher">
             <div class="imgfeature">
-              <img src="../assets/logoschedule.png" alt="">
+              <img style="width: 60px; height: 50px; margin-top: 20px;" src="../assets/NXB.png" alt="">
             </div>
             <h5>Xem nhà xuất bản</h5>
           </div>
           <div class="formGroup" @click="goToAddPublisher">
             <div class="imgfeature">
-              <img src="../assets/type.png" alt="">
+              <img style="width: 60px; height: 50px; margin-top: 20px;" src="../assets/addNXB.png" alt="">
             </div>
             <h5>Thêm nhà xuất bản</h5>
           </div>
@@ -87,7 +87,7 @@
             </div>
             <h5>Sơ đồ thống kê mượn sách</h5>
           </div> -->
-          <div class="formGroup" @click="goToNews">
+          <div class="formGroup" @click="">
             <div class="imgfeature">
               <img src="../assets/logonews.png" alt="">
             </div>

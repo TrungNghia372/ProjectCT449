@@ -10,7 +10,7 @@ import DetailBook from '../views/DetailBook.vue';
 import UpdateBook from '../views/UpdateBook.vue';
 import UpdatePublisher from '../views/UpdatePublisher.vue';
 import Rule from '../views/Rule.vue';
-import News from '../views/News.vue';
+import FollowBook from '../views/FollowBook.vue';
 import DetailBookAdmin from '../views/DetailbookAdmin.vue';
 import DetailPublisher from '../views/DetailPublisher.vue';
 import AddPublisher from '../views/AddPublisher.vue';
@@ -22,7 +22,7 @@ const router = createRouter({
   routes: [
     { path: '/',  name: 'home', component: Home, },
     { path: '/bookProduct', name: 'book', component: Book,},
-    { path: '/news',name: 'news', component: News,},
+    { path: '/followBook',name: 'followBook', component: FollowBook,},
     { path: '/contact', name: 'contact', component: Contact,},
     { path: '/book/:id', name: 'detailBook', component: DetailBook,},
     { path: '/popularBook/', name: 'popularBook', component: PopularBook ,},

@@ -151,6 +151,7 @@ tbody:nth-child(even){
 
 
 .book-info {
+    text-align: center;
     width: 500px;
     margin: 0 auto;
 }

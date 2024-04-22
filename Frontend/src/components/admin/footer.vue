@@ -2,12 +2,12 @@
     <footer class="footer-distributed" data-v-0d5f32b1="" data-v-2dc54a20="">
         <div class="footer-left" data-v-0d5f32b1="">
             <h3 data-v-0d5f32b1=""><span data-v-0d5f32b1="" style="font-family: 'Homemade Apple', cursive;">Book_TN372</span></h3>
-            <p class="footer-links" data-v-0d5f32b1="">
+            <!-- <p class="footer-links" data-v-0d5f32b1="">
                 <a href="#" class="link-1" data-v-0d5f32b1="">Trang chủ</a>
                 <a href="#" data-v-0d5f32b1="">Sách tiếng anh</a>
                 <a href="#" data-v-0d5f32b1="">Sách văn học</a>
                 <a href="#" data-v-0d5f32b1="">Sách công nghệ</a><a href="#" data-v-0d5f32b1="">Xem thêm</a>
-            </p>
+            </p> -->
             <p class="footer-company-name" data-v-0d5f32b1="">Bản quyền thuộc về @QuachTrungNghia</p>
         </div>
         <div class="footer-center" data-v-0d5f32b1="">

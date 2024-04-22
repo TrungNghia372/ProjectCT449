@@ -159,8 +159,8 @@ textarea {
 
 button {
   margin-top: 20px;
-  background-color: #3a80f1;
-  color: #fff;
+  background-color: rgba(79, 218, 111, 0.7);
+  color: #000000;
   padding: 10px;
   border: none;
   cursor: pointer;

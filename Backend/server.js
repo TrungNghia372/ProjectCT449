@@ -16,6 +16,7 @@ const authRoute = require('./routes/Auth');
 const userRoute = require('./routes/User');
 const newsRoute = require('./routes/News');
 const cartsRoute = require('./routes/Carts');
+const followBook = require('./routes/FollowBook');
 //------------------------------------------
 
 dotenv.config();
@@ -42,6 +43,7 @@ app.use(cookieParser());
 //Routes
 app.use("/api/book",bookRoute);                     //------------------------------------------da lam
 app.use("/api/publisher",publisherRoute);                     //------------------------------------------da lam
+app.use("/api/followBook",followBook)
 app.use("/api/product",productRoute);
 app.use("/api/auth",authRoute);
 app.use("/api/user",userRoute);
